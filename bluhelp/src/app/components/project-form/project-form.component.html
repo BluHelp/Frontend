@@ -1,1 +1,42 @@
-<p>project-form works!</p>
+
+<p>Passo 2 - Informações do Projeto</p>
+</div>
+<div id="circles">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+</div>
+
+<div class="form-box">
+    <div class="d1">
+        <div class="l1">
+            <div>
+                <label for=titulo>Título</label>
+            </div>
+            <input type="text" id="titulo" name="Título" />
+        </div>
+    </div>
+
+
+    <div class="d2">
+        <div class="l2">
+            <div>
+                <label for=categoria>Categoria</label>
+            </div>
+            <input type="select" id="Categoria" />
+        </div>
+    </div>
+</div>
+
+
+<div class="botao">
+    <button type="button" class="avançar" *ngIf="steps != 1" (click)="steps = steps - 1">Voltar</button>
+</div>
+<div class="botao">
+    <button type="submit" class="avançar" *ngIf="steps != 3" (click)="steps = steps + 1">Avançar</button>
+</div>
+<div class="botao">
+    <a routerLink="/login"><button type="button" class="avançar" *ngIf="steps == 3" (click)="doRegister()">Cadastrar</button></a>
+</div>
+
