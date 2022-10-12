@@ -15,4 +15,6 @@ export class ProjectService {
   addProject(project: Project): Observable<Project>{
 		return this.client.post<Project>(this.endpoint, project);
 	}
+
 }
+
