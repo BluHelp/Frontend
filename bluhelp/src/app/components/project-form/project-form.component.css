@@ -172,11 +172,13 @@ button:hover span:after {
     background: url(../../../assets/categoria.svg) no-repeat 5px 10px;
  }
 
- .passo2{
+ p{
      display: flex;
      justify-content: center;
      margin-top: 70px;
      font-size: 15px;
      font-weight: bolder;
  }
+ 
+ 
 
