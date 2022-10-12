@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectFormComponent implements OnInit {
 
+  steps: any = 1;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+  submit(){
+    this.steps += 1;
   }
 
 }

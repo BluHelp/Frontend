@@ -1,5 +1,7 @@
 
-<p>Passo 2 - Informações do Projeto</p>
+ <div *ngIf="steps == 1">
+ <div class="passo2">
+    <p>Passo 2 - Informações do Projeto</p>
 </div>
 <div id="circles">
     <span class="step"></span>
@@ -28,7 +30,113 @@
         </div>
     </div>
 </div>
+</div>
+<div *ngIf="steps == 2">
+<div class="passo3">
+    <p>Passo 3 - Descrição e objetivo do Projeto</p>
+</div>
+<div id="circles">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+</div>
 
+
+<div class="form-box">
+    <div class="d1">
+        <div class="l1">
+            <div>
+                <label for=descricao>Descrição</label>
+            </div>
+            <input type="text" id="descricao" name="Descrição" />
+        </div>
+    </div>
+
+    <div class="d2">
+        <div class="l2">
+            <div>
+                <label for=objetivo>Objetivo</label>
+            </div>
+            <input type="text" id="objetivo" name="Objetivo" />
+        </div>
+    </div>
+</div>
+</div>
+
+<div *ngIf="steps == 3">
+
+    <div class="passo4">
+        <p>Passo 4 - Endereço do Projeto</p>
+    </div>
+    <div id="circles">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+    </div>
+
+
+    <div class="form-box1">
+        <div class="d11">
+            <div class="l11">
+                <div>
+                    <label for=cep>CEP</label>
+                </div>
+                <input type="text" id="cep" name="CEP" />
+            </div>
+        </div>
+
+
+        <div class="d22">
+            <div class="l22">
+                <div>
+                    <label for=logradouro>Logradouro</label>
+                </div>
+                <input type="select" id="Logradouro" />
+            </div>
+        </div>
+
+        <div class="d33">
+            <div class="l33">
+                <div>
+                    <label for=numero>Número</label>
+                </div>
+                <input type="text" id="numero" name="Número" />
+            </div>
+        </div>
+    </div>
+
+    <div class="form-box2">
+        <div class="d44">
+            <div class="l44">
+                <div>
+                    <label for=bairro>Bairro</label>
+                </div>
+                <input type="text" id="bairro" name="Bairro" />
+            </div>
+        </div>
+
+        <div class="d55">
+            <div class="l55">
+                <div>
+                    <label for=tipo via>Tipo via</label>
+                </div>
+                <input type="text" id="tipo via" name="Tipo via" />
+            </div>
+        </div>
+
+        <div class="d66">
+            <div class="l66">
+                <div>
+                    <label for=complemento>Complemento</label>
+                </div>
+                <input type="text" id="complemento" name="Complemento" />
+            </div>
+        </div>
+    </div>
+
+</div>
 
 <div class="botao">
     <button type="button" class="avançar" *ngIf="steps != 1" (click)="steps = steps - 1">Voltar</button>
@@ -37,6 +145,6 @@
     <button type="submit" class="avançar" *ngIf="steps != 3" (click)="steps = steps + 1">Avançar</button>
 </div>
 <div class="botao">
-    <a routerLink="/login"><button type="button" class="avançar" *ngIf="steps == 3" (click)="doRegister()">Cadastrar</button></a>
+    <a routerLink="/login"><button type="button" class="avançar" *ngIf="steps == 3" >Cadastrar</button></a>
 </div>
 
