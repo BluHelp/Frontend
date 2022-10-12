@@ -1,0 +1,182 @@
+.lacuna1{
+    justify-content: center;
+}
+
+.form-box{
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.d1{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.d1 input{
+    height: 60px;
+    border: 3px solid #002b9a;
+    border-radius: 7px;
+    padding-left: 45px;
+}
+
+.d2{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.d2 input{
+    height: 60px;
+    border: 3px solid #002b9a;
+    border-radius: 7px;
+    padding-left: 45px;
+}
+
+
+
+
+#circles {
+    text-align: center;
+    margin-top: 15px;
+}
+.step {
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+    background-color: white;
+    border: #002b9a 2px solid;
+    border-radius: 50%;
+    display: inline-block;
+}
+.step.active {
+    background-color: #002b9a;
+}
+
+.botao{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    height: 50px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-size: 25px;
+    font-weight: normal;
+    margin-top: 30px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+}
+ 
+ .botao span {
+     cursor: pointer;
+     display: inline-block;
+     position: relative;
+     transition: 0.5s;
+ }
+ 
+ #submit span:after {
+     content: url(../../../assets/seta-direita.svg);
+     position: absolute;
+     opacity: 0;
+     top: 0;
+     right: -20px;
+     transition: 0.5s;
+     transform: scaleX(1);
+ }
+ 
+ #submit:hover span {
+     padding-right: 45px;
+ }
+ 
+ #submit:hover span:after {
+     opacity: 1;
+     right: -20px;
+ }
+ 
+ #submit button{
+     float: right;
+ }
+
+ #back span:after {
+    content: url(../../../assets/seta-esquerda.svg);
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -45px;
+    transition: 0.5s;
+    transform: scaleX(1);
+}
+
+#back:hover span {
+    padding-left: 20px;
+}
+
+#back:hover span:after {
+    opacity: 1;
+    left: -50px;
+}
+
+#back button{
+    float: left;
+}
+ 
+ 
+
+button{
+    background-color: #002b9a;
+    height: 50px;
+    width: 496px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-size: 25px;
+    font-weight: normal;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button span:after {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+button:hover span {
+    padding-right: 25px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: -20px;
+}
+
+.d1 input{
+    width: 500px;
+   background: url(../../../assets/lapis.svg) no-repeat 5px 10px;
+ }
+
+ .d2 input{
+    width: 500px;
+    background: url(../../../assets/categoria.svg) no-repeat 5px 10px;
+ }
+
+ .passo2{
+     display: flex;
+     justify-content: center;
+     margin-top: 70px;
+     font-size: 15px;
+     font-weight: bolder;
+ }
+
