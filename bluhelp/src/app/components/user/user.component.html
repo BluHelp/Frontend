@@ -1,1 +1,110 @@
-<p>user works!</p>
+
+
+
+<form (ngSubmit)="submit()" #userForm="ngForm">
+
+    <div *ngIf="steps == 1">
+        <h1>Bem-Vindo!</h1>
+<h2>Passo 1 - Informações Básicas</h2>
+<div id="circles">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+
+</div>
+        <div class="row">
+            <div id="nome">
+                <div class="form-box">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" size="10" required  [(ngModel)]="user.name" />
+                </div>
+            </div>
+            <div id="sobrenome">
+                <div class="form-box">
+                    <label for="surname" id="surname">Sobrenome</label>
+                    <input type="text" name="surname" size="10"   [(ngModel)]="user.surname"/>
+                </div>
+            </div>
+        </div>
+
+        <div id="cpf">
+            <div class="form-box">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" size="30" minlength="11" required   [(ngModel)]="user.cpf"/>
+            </div>
+        </div>
+
+        <div id="foto-perfil">
+            <div class="form-box">
+                <label for="photo">Foto de Perfil</label>
+                <input type="file" id="photo" name="photo"   [(ngModel)]="user.photo"/>
+            </div>
+        </div>
+    </div>
+
+
+    <div *ngIf="steps == 2">
+        <h2>Passo 2 - Contato</h2>
+        <div id="circles">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+
+        </div>
+        <div id="email">
+            <div class="form-box">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" size="10" required   [(ngModel)]="user.email"/>
+            </div>
+        </div>
+        <div id="telefone">
+            <div class="form-box">
+                <label for="phone" id="phone">Telefone</label>
+                <input type="tel" name="phone" size="10"   [(ngModel)]="user.phone"/>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="steps == 3">
+
+        <h2>Passo 3 - Senha</h2>
+        <div id="circles">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+
+        </div>
+
+        <div id="senha">
+            <div class="form-box">
+                <label for="Senha">Senha</label>
+                <input type="password" id="password" name="password" size="10" required   [(ngModel)]="user.password"/>
+            </div>
+        </div>
+        <div id="confirmpass">
+            <div class="form-box">
+                <label for="Senha">Confirme a senha</label>
+                <input type="password" id="password" name="password" size="10" required   [(ngModel)]="user.password"/>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</form>
+
+<div class="botao">
+    <button type="button" class="avançar" *ngIf="steps != 1" (click)="steps = steps - 1">Voltar</button>
+</div>
+<div class="botao">
+    <button type="submit" class="avançar" *ngIf="steps != 3" (click)="steps = steps + 1">Avançar</button>
+</div>
+<div class="botao">
+    <a routerLink="/login"><button type="button" class="avançar" *ngIf="steps == 3" (click)="doRegister()">Cadastrar</button></a>
+</div>
+
+<div class="login" *ngIf="steps == 1">
+    <p>Já possui cadastro? <a routerLink="/login">Fazer login</a></p>
+</div>
