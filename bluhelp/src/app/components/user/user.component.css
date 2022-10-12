@@ -1,0 +1,163 @@
+h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    bottom: 15px;
+    margin-bottom: 0;
+}
+
+#circles {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.step {
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+    background-color: white;
+    border: #002b9a 2px solid;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.step.active {
+    background-color: #002b9a;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+form input {
+    outline: unset;
+    height: 50px;
+    border: 3px solid #002b9a;
+    border-radius: 7px;
+    margin-top: 5px;
+    padding-left: 40px;
+    font-size: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#nome input {
+    width: 238px;
+    background: url(../../../assets/nome-user.svg) no-repeat 5px 10px;
+}
+
+#sobrenome input {
+    width: 238px;
+    background: url(../../../assets/nome-user.svg) no-repeat 5px 10px;
+
+}
+
+#cpf input {
+    background: url(../../../assets/cpf.svg) no-repeat 5px 12px;
+}
+
+.widthmaior input {
+    width: 496px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#foto-perfil label {
+    cursor: pointer;
+    margin-top: 15px;
+    border: #002b9a solid 3px;
+    height: 45px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+
+}
+
+#plus-file {
+    position: relative;
+    left: 425px;
+    bottom: 155px;
+    margin-left: 275px;
+    border: white solid 1px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding-top: 2px;
+    background-color: white;
+    box-shadow: 1px 1px rgb(192, 192, 192);
+}
+
+button{
+    background-color: #002b9a;
+    height: 50px;
+    width: 496px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-size: 25px;
+    font-weight: normal;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button span:after {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+button:hover span {
+    padding-right: 25px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: -20px;
+}
+
+p {
+    display: block;
+    text-align: center;
+}
+
+p a {
+    text-decoration: none;
+    color: #002b9a;
+}
+
+.login {
+    margin-top: 20px;
+}
