@@ -7,5 +7,6 @@ export interface Project {
     description: string;
     categories: Array<number>;
     photo: string;
+
     
 }
