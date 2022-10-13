@@ -5,14 +5,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserComponent } from './components/user/user.component';
+import { UserFormComponent } from './components/user-form/user-form.component';
 import { ProjectFormComponent } from './components/project-form/project-form.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { HeaderComponent } from './components/header/header.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
-    ProjectFormComponent
+    UserFormComponent,
+    ProjectFormComponent,
+    UserProfileComponent,
+    HeaderComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
