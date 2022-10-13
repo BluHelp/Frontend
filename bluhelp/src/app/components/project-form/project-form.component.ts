@@ -18,8 +18,9 @@ export class ProjectFormComponent implements OnInit {
     objective: "",
     address: 0,
     description: "",
-    photo: ""
-   }
+    photo: "",
+    categories: []
+   } 
 
   constructor(private service: ProjectService) { }
 
