@@ -31,11 +31,7 @@ export class ProjectFormComponent implements OnInit {
   }
 
   doRegister(): void{
-    this.service.addProject(this.project).subscribe(
-      data => {
-        this.project = data;
-      }
-    )
+    this.service.addProject(this.project).subscribe(data => {this.project = data;})
   }
 
 }
