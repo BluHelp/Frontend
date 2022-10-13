@@ -13,7 +13,7 @@ export class UserService {
   constructor(private client: HttpClient) { }
 
   addUser(user: User): Observable<User>{
-		return this.client.post<User>(this.endpoint , user);
+		return this.client.post<User>(this.endpoint, user);
 	}
   updateUser(user: User, id: number){
     return this.client.put<User>(this.endpoint + 'id/' + id, user);

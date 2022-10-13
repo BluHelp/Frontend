@@ -23,7 +23,8 @@ export class UserComponent implements OnInit {
 
   doRegister(): void {
     this.service.addUser(this.user).subscribe(
-      data => { this.user = data;
+      data => { 
+        this.user = data;
       })
   }
 

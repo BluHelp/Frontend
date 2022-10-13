@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Project } from '../models/project';
+import { ProjectGet } from '../models/project-get';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,11 @@ export class ProjectService {
   addProject(project: Project): Observable<Project>{
 		return this.client.post<Project>(this.endpoint, project);
 	}
+
+  getTop4Projects(): Observable<Array<ProjectGet>>{
+    return this.client.get<Array<ProjectGet>>(this.endpoint + '/default');
+  }
+  
 
 }
 
