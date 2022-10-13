@@ -5,7 +5,6 @@ export interface Project {
     objective: string;
     address: number;
     description: string;
-    categories: number[];
     photo: string;
     
 }
