@@ -73,7 +73,7 @@ form input {
 }
 
 #cpf input {
-    background: url(../../../assets/cpf.svg) no-repeat 5px 12px;
+    background: url(/bluhelp/src/assets/cpf.svg) no-repeat 5px 12px;
 }
 
 .widthmaior input {

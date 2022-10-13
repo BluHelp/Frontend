@@ -11,7 +11,7 @@ export class UserComponent implements OnInit {
 
   steps: any = 1;
 
-  user: User = {id: 0, name: "", surname: "", password: "", cpf: "", photo:"", email: "", phone: ""}
+  user: User = {name: "", surname: "", password: "", cpf: "", photo:"", email: "", phone: ""}
 
   constructor(private service: UserService) { }
 
