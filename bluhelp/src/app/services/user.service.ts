@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../models/user';
+import { ProjectGet } from '../models/project-get';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +21,9 @@ export class UserService {
   }
   deleteUser(user: User, id: number){
     return this.client.delete<User>(this.endpoint + 'id/' + id);
+  }
+  getUserWithProjects(id: number): Observable<ProjectGet>{
+    return this.client.get<ProjectGet>(this.endpoint + 'id/' + id);
   }
 
 }
