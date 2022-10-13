@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 import { ProjectFormComponent } from './components/project-form/project-form.component';
+import { ProjectProfileComponent } from './components/project-profile/project-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    ProjectFormComponent
+    ProjectFormComponent,
+    ProjectProfileComponent
   ],
   imports: [
     BrowserModule,
