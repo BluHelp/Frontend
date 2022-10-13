@@ -14,9 +14,9 @@
     <div class="d1">
         <div class="l1">
             <div>
-                <label for=titulo>Título</label>
-            </div>
-            <input type="text" id="titulo" name="Título" />
+            <label for=title>Título</label>
+        </div>
+            <input type="text" id="title" name="title" [(ngModel)]="project.title"/>
         </div>
     </div>
 
@@ -24,9 +24,9 @@
     <div class="d2">
         <div class="l2">
             <div>
-                <label for=categoria>Categoria</label>
-            </div>
-            <input type="select" id="Categoria" />
+            <label for=categories>Categoria</label>
+        </div>
+            <input type="select" id="categories"  />
         </div>
     </div>
 </div>
@@ -47,18 +47,18 @@
     <div class="d1">
         <div class="l1">
             <div>
-                <label for=descricao>Descrição</label>
-            </div>
-            <input type="text" id="descricao" name="Descrição" />
+            <label for=description>Descrição</label>
+        </div>
+            <input type="text" id="description" name="description" [(ngModel)]="project.description" />
         </div>
     </div>
 
     <div class="d2">
         <div class="l2">
             <div>
-                <label for=objetivo>Objetivo</label>
-            </div>
-            <input type="text" id="objetivo" name="Objetivo" />
+            <label for=objective>Objetivo</label>
+        </div>
+            <input type="text" id="objective" name="objective" [(ngModel)]="project.objective"/>
         </div>
     </div>
 </div>
@@ -145,6 +145,6 @@
     <button type="submit" class="avançar" *ngIf="steps != 3" (click)="steps = steps + 1">Avançar</button>
 </div>
 <div class="botao">
-    <a routerLink="/login"><button type="button" class="avançar" *ngIf="steps == 3" >Cadastrar</button></a>
+    <a routerLink="/project"><button type="button" class="avançar" *ngIf="steps == 3" (click)="doRegister()">Cadastrar</button></a>
 </div>
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Project } from 'src/app/models/project';
+import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
   selector: 'app-project-form',
@@ -9,12 +11,30 @@ export class ProjectFormComponent implements OnInit {
 
   steps: any = 1;
 
-  constructor() { }
+  project: Project = {
+    id: 0,
+    creator: 0,
+    title: "",
+    objective: "",
+    address: 0,
+    description: "",
+    photo: ""
+   }
+
+  constructor(private service: ProjectService) { }
 
   ngOnInit(): void {
   }
   submit(){
     this.steps += 1;
+  }
+
+  doRegister(): void{
+    this.service.addProject(this.project).subscribe(
+      data => {
+        this.project = data;
+      }
+    )
   }
 
 }
