@@ -16,4 +16,7 @@ export class NavbarComponent implements OnInit {
   criarprojeto(){
     this.router.navigate(['criarprojeto'])
   }
+  exitSystem(){
+    this.router.navigate(['exitSystem'])
+  }
 }
