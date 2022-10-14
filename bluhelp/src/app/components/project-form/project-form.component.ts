@@ -16,10 +16,14 @@ export class ProjectFormComponent implements OnInit {
     creator: 0,
     title: "",
     objective: "",
-    address: 0,
     description: "",
     photo: "",
-    categories: []
+    categories: [],
+    street: "",
+    number: 0,
+    district: "",
+    cep: "",
+    reference: ""
    } 
 
   constructor(private service: ProjectService) { }
