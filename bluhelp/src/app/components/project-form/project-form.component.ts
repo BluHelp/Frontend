@@ -16,10 +16,14 @@ export class ProjectFormComponent implements OnInit {
     creator: 0,
     title: "",
     objective: "",
-    address: 0,
     description: "",
     photo: "",
-    categories: []
+    categories: [],
+    street: "",
+    number: 0,
+    district: "",
+    cep: "",
+    reference: ""
    } 
 
   constructor(private service: ProjectService) { }
@@ -31,11 +35,7 @@ export class ProjectFormComponent implements OnInit {
   }
 
   doRegister(): void{
-    this.service.addProject(this.project).subscribe(
-      data => {
-        this.project = data;
-      }
-    )
+    this.service.addProject(this.project).subscribe(data => {this.project = data;})
   }
 
 }

@@ -16,14 +16,14 @@ export class UserService {
   addUser(user: User): Observable<User>{
 		return this.client.post<User>(this.endpoint, user);
 	}
-  updateUser(user: User, id: number){
-    return this.client.put<User>(this.endpoint + 'id/' + id, user);
+  updateUser(user: User, id: number): Observable<string>{
+    return this.client.put<string>(this.endpoint + id, user);
   }
-  deleteUser(user: User, id: number){
-    return this.client.delete<User>(this.endpoint + 'id/' + id);
+  deleteUser(user: User, id: number): Observable<string>{
+    return this.client.delete<string>(this.endpoint + id);
   }
   getUserWithProjects(id: number): Observable<ProjectGet>{
-    return this.client.get<ProjectGet>(this.endpoint + 'id/' + id);
+    return this.client.get<ProjectGet>(this.endpoint + id);
   }
 
 }

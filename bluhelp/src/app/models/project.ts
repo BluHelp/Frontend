@@ -3,10 +3,13 @@ export interface Project {
     creator: number;
     title: string;
     objective: string;
-    address: number;
     description: string;
     categories: Array<number>;
     photo: string;
+    street: string;
+    number: number;
+    district: string;
+    cep: string;
+    reference: string;
 
-    
 }

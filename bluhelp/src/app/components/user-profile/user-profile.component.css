@@ -1,0 +1,144 @@
+.icon {
+    margin-left: 30px;
+  }
+  
+  .icon:hover {
+    opacity: 0.6;
+  }
+  
+  .active {
+    border: #002b9a solid 1px;
+    border-radius: 50%;
+    background-color: #002b9a;
+    width: 40px;
+    height: 40px;
+    padding-left: 5px;
+    padding-top: 5px;
+    margin-left: 25px;
+    margin-bottom: 50px;
+  }
+  
+  .active:hover {
+    opacity: 0.6;
+  }
+  
+  .coluna-1 {
+    margin-left: 250px;
+    width: 400px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    
+  }
+  
+  .coluna-1 img{
+    display: flex;
+    align-self: center;
+  }
+  
+  .coluna-1 img,p, h1{
+  margin-top: 10px;
+  }
+  
+  #fotoPerfil{
+    margin-bottom: 20px;
+    display: flex;
+    border: #d9d9d9 1px solid;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+  }
+  
+  .info-perfil {
+    display: flex;
+    flex-direction: row;
+  }
+  .info-perfil p{
+    margin-left: 10px;
+  }
+  h2{
+    font-size: 30px;
+  }
+  
+  .titulo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "coluna-1 column-2";
+    grid-gap: 90px;
+  }
+  .coluna-1{
+    grid-area: "coluna-1";
+  }
+  .column-2{
+    grid-area: "column-2";
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+   
+  }
+  .projetos{
+    display: flex;
+    
+  }
+  
+  .column-1 h3, .coluna-2 h3{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-right: 60px;
+    color: #433B3B;
+    font-weight: normal;
+    cursor: pointer;
+  }
+  .projetos-criados{
+    border-bottom: #002b9a 3px solid;
+    padding-bottom: 5px;
+    border-radius: 3px;
+  }
+  .column-1 h3:hover, .coluna-2 h3:hover{
+    opacity: 0.6;
+  }
+  .cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .card1{
+    margin-right: 60px;
+    margin-bottom: 30px;
+    border: #002b9a 2px solid;
+    border-radius: 7px;
+    padding: 10px 10px 0 10px;
+  }
+  .title{
+    text-align: center;
+  
+  }
+  #project-img{
+    width: 200px;
+    height: 95px;
+    border: white 0px solid;
+    border-radius: 7px;
+  }
+  .more{
+    display: flex;
+    justify-content: space-between;
+  }
+  .more img{
+    margin-right: 10px;
+  }
+  .more p{
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+  

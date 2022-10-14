@@ -10,14 +10,25 @@
 .d1{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
+
+ .d2 input, select{
+    width: 500px;
+    background: url(../../../assets/categoria.svg) no-repeat 5px 10px;
+    height: 60px;
+    border: 3px solid #002b9a;
+    border-radius: 7px;
+    padding-left: 45px;
+ }
 
 .d1 input{
     height: 60px;
     border: 3px solid #002b9a;
     border-radius: 7px;
     padding-left: 45px;
+    width: 500px;
+    background: url(../../../assets/lapis.svg) no-repeat 5px 10px;
 }
 
 .d2{
@@ -25,15 +36,6 @@
     justify-content: center;
     margin-top: 30px;
 }
-
-.d2 input{
-    height: 60px;
-    border: 3px solid #002b9a;
-    border-radius: 7px;
-    padding-left: 45px;
-}
-
-
 
 
 #circles {
@@ -53,17 +55,16 @@
     background-color: #002b9a;
 }
 
-.botao{
+.buttons{
     display: flex;
     justify-content: center;
-    margin-top: 70px;
     height: 50px;
     border: none;
     border-radius: 7px;
     color: white;
     font-size: 25px;
     font-weight: normal;
-    margin-top: 30px;
+    margin-top: 50px;
     cursor: pointer;
     text-align: center;
     transition: all 0.5s;
@@ -76,7 +77,7 @@
      transition: 0.5s;
  }
  
- #submit span:after {
+ .nextbtn span:after {
      content: url(../../../assets/seta-direita.svg);
      position: absolute;
      opacity: 0;
@@ -86,20 +87,16 @@
      transform: scaleX(1);
  }
  
- #submit:hover span {
+ .nextbtn:hover span {
      padding-right: 45px;
  }
  
- #submit:hover span:after {
+ .nextbtn:hover span:after {
      opacity: 1;
      right: -20px;
  }
  
- #submit button{
-     float: right;
- }
-
- #back span:after {
+ .nextbtn span:after {
     content: url(../../../assets/seta-esquerda.svg);
     position: absolute;
     opacity: 0;
@@ -109,35 +106,38 @@
     transform: scaleX(1);
 }
 
-#back:hover span {
+.backbtn:hover span {
     padding-left: 20px;
 }
 
-#back:hover span:after {
+.backbtn:hover span:after {
     opacity: 1;
     left: -50px;
 }
 
-#back button{
-    float: left;
-}
- 
- 
+
 
 button{
     background-color: #002b9a;
     height: 50px;
-    width: 496px;
     border: none;
     border-radius: 7px;
     color: white;
     font-size: 25px;
     font-weight: normal;
-    margin-top: 25px;
     cursor: pointer;
     transition: all 0.5s;
+    margin: 0 5px 0 5px;
 }
-
+.next, .register{
+    width: 292px;
+}
+.back{
+    width: 190px;
+}
+.next1{
+    width: 500px;
+}
 button span {
     cursor: pointer;
     display: inline-block;
@@ -162,23 +162,14 @@ button:hover span:after {
     right: -20px;
 }
 
-.d1 input{
-    width: 500px;
-   background: url(../../../assets/lapis.svg) no-repeat 5px 10px;
- }
-
- .d2 input{
-    width: 500px;
-    background: url(../../../assets/categoria.svg) no-repeat 5px 10px;
- }
-
  p{
      display: flex;
      justify-content: center;
-     margin-top: 70px;
+     margin-top: 130px;
      font-size: 15px;
      font-weight: bolder;
  }
+
  
  
 

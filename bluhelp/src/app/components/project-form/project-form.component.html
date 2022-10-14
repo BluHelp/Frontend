@@ -1,4 +1,5 @@
-
+<form (ngSubmit)="submit()" #projectForm="ngForm">
+ 
  <div *ngIf="steps == 1">
  <div class="passo2">
     <p>Passo 2 - Informações do Projeto</p>
@@ -24,9 +25,15 @@
     <div class="d2">
         <div class="l2">
             <div>
-            <label for=categories>Categoria</label>
-        </div>
-            <input type="select" id="categories"  />
+                <label for="categories">Categoria</label>
+            </div>
+            <select name="categories">
+                <option value="" disabled selected hidden></option>
+                <option value="category.id" name="category.name">Categoria1</option>
+                <option value="category.id" name="category.name">Categoria2</option>
+                <option value="category.id" name="category.name">Categoria3</option>
+                <option value="category.id" name="category.name">Categoria4</option>
+            </select>
         </div>
     </div>
 </div>
@@ -83,7 +90,7 @@
                 <div>
                     <label for=cep>CEP</label>
                 </div>
-                <input type="text" id="cep" name="CEP" />
+                <input type="text" id="cep" name="cep" [(ngModel)]="project.cep"/>
             </div>
         </div>
 
@@ -91,18 +98,18 @@
         <div class="d22">
             <div class="l22">
                 <div>
-                    <label for=logradouro>Logradouro</label>
+                    <label for=street>Logradouro</label>
                 </div>
-                <input type="select" id="Logradouro" />
+                <input type="text" id="street" [(ngModel)]="project.street" />
             </div>
         </div>
 
         <div class="d33">
             <div class="l33">
                 <div>
-                    <label for=numero>Número</label>
+                    <label for=number>Número</label>
                 </div>
-                <input type="text" id="numero" name="Número" />
+                <input type="text" id="number" name="number" [(ngModel)]="project.number"/>
             </div>
         </div>
     </div>
@@ -111,40 +118,37 @@
         <div class="d44">
             <div class="l44">
                 <div>
-                    <label for=bairro>Bairro</label>
+                    <label for=district>Bairro</label>
                 </div>
-                <input type="text" id="bairro" name="Bairro" />
+                <input type="text" id="district" name="district" [(ngModel)]="project.district" />
             </div>
         </div>
 
-        <div class="d55">
-            <div class="l55">
-                <div>
-                    <label for=tipo via>Tipo via</label>
-                </div>
-                <input type="text" id="tipo via" name="Tipo via" />
-            </div>
-        </div>
 
         <div class="d66">
             <div class="l66">
                 <div>
-                    <label for=complemento>Complemento</label>
+                    <label for=reference>Complemento</label>
                 </div>
-                <input type="text" id="complemento" name="Complemento" />
+                <input type="text" id="reference" name="reference" [(ngModel)]="project.reference"/>
             </div>
         </div>
     </div>
 
 </div>
-
-<div class="botao">
-    <button type="button" class="avançar" *ngIf="steps != 1" (click)="steps = steps - 1">Voltar</button>
+</form>
+<div class="buttons">
+<div class="backbtn">
+    <button type="button" class="back" *ngIf="steps != 1" (click)="steps = steps - 1">Voltar</button>
+</div>
+<div class="nextbtn">
+    <button type="submit" class="next" *ngIf="steps == 2" (click)="steps = steps + 1">Avançar</button>
+</div>
+<div class="nextbtn">
+    <button type="submit" class="next1" *ngIf="steps == 1" (click)="steps = steps + 1">Avançar</button>
 </div>
 <div class="botao">
-    <button type="submit" class="avançar" *ngIf="steps != 3" (click)="steps = steps + 1">Avançar</button>
+    <a routerLink="/project"><button type="button" class="register" *ngIf="steps == 3" (click)="doRegister()">Cadastrar</button></a>
 </div>
-<div class="botao">
-    <a routerLink="/project"><button type="button" class="avançar" *ngIf="steps == 3" (click)="doRegister()">Cadastrar</button></a>
 </div>
 

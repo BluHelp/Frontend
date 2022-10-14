@@ -1,3 +1,5 @@
+import { Category } from "./category";
+
 export interface ProjectView {
     id: number;
     creator: number;
@@ -8,9 +10,9 @@ export interface ProjectView {
     address: number;
     district: string;
     description: string;
-    //List<CategoryProjection> categories
-    //progress: Progress
+    categories: Array<Category>,
+    progress: number;
     photo: string;
-    //LocalDateTime date
+    date: string;
     avarageReview: number;
 }
