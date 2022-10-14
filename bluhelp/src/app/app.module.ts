@@ -11,6 +11,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchComponent } from './components/search/search.component';
+import { ExitSystemComponent } from './components/exit-system/exit-system.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SearchComponent } from './components/search/search.component';
     UserProfileComponent,
     HeaderComponent,
     NavbarComponent,
-    SearchComponent
+    SearchComponent,
+    ExitSystemComponent
   ],
   imports: [
     BrowserModule,
