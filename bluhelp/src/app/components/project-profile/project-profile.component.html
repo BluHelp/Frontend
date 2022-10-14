@@ -1,1 +1,83 @@
-<p>project-profile works!</p>
+<div class="container">
+    <div class="column-1">
+        <div class="row11">
+            <img src="../imagens/Presidente-Du-Tambu-fiscaliza-ruas-que-precisam-de-manutencao-1024x798.jpg" class="foto-projeto" width="550px" height="220px" alt=""> //rooter link adicionar, ou oq leva p foto ???????
+        </div>
+        <div class="row22">
+            <div class="objective-icon">
+
+                <img src="../imagens/diamond-solid 2.svg" alt="">
+                <div class="objective-title">
+                    <h3>Objetivo</h3>
+                </div>
+            </div>
+            <div class="objective-text">
+                <p>
+                    {{project-view.objectiv}}
+                </p>
+            </div>
+            <div class="description-icon">
+                <img src="../imagens/file-pen-solid 1.svg" alt="">
+
+                <div class="description-title">
+                    <h3>Descrição</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row33">
+            <p>
+                {{project-view.description}}
+            </p>
+        </div>
+
+    </div>
+    <div class="column-2">
+        <div class="row-1">
+
+            <h1>
+                {{project-view.title}}
+            </h1>
+            <a routerLink="user-profile">
+                {{project-view.creatorName}}{{project-view.creatorSurname}}
+            </a>
+            <p>Criado em: {{}}</p>
+            <p>Avaliação</p>
+
+        </div>
+
+        <div class="row-2">
+            <div class="district-icon">
+                <img src="../imagens/Vector (25).svg" alt="">
+                <h3>Bairro</h3>
+            </div>
+            <div class="category-icon">
+                <img src="../imagens/list-ul-solid 1.svg" alt="">
+                <h3>
+                    {{}}
+                </h3>
+            </div>
+            <div class="status-icon">
+                <img src="../imagens/Vector (26).svg" alt="">
+                <h3>
+                    {{project.progress}}
+                </h3>
+            </div>
+        </div>
+        <div class="row-3">
+            <p>Avalie do projeto:</p>
+            <div class="contribution-icon">
+                <img src="../imagens/users-solid 1.svg" alt="">
+                <a href="#">Contribuições</a>
+            </div>
+
+            <div class="edit-delete-icon">
+                <div class="edit-icon">
+                    <img src="../imagens/Vector (52).svg" alt="">
+                </div>
+                <div class="delete-icon">
+                    <img src="../imagens/Vector (53).svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

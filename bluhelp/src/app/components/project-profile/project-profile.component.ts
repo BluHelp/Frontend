@@ -1,13 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectView } from 'src/app/models/project-view';
+import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
   selector: 'app-project-profile',
   templateUrl: './project-profile.component.html',
   styleUrls: ['./project-profile.component.css']
 })
+
 export class ProjectProfileComponent implements OnInit {
 
-  constructor() { }
+projectview : ProjectView = {id: 0, creator: 0, creatorName:"", creatorSurname:"", title:"", objective:"", address:0, district:"", description:"", photo:"", avarageReview:0}
+
+  constructor( private service : ProjectService) { }
 
   ngOnInit(): void {
   }
