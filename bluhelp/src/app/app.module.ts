@@ -10,6 +10,7 @@ import { ProjectFormComponent } from './components/project-form/project-form.com
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ProjectFormComponent,
     UserProfileComponent,
     HeaderComponent,
-    NavbarComponent
+    NavbarComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
