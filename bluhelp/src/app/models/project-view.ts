@@ -11,8 +11,8 @@ export interface ProjectView {
     district: string;
     description: string;
     categories: Array<Category>,
-    //progress: Progress
+    progress: number;
     photo: string;
-    //LocalDateTime date
+    date: string;
     avarageReview: number;
 }
