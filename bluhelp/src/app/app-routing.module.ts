@@ -6,7 +6,8 @@ import { ProjectFormComponent } from './components/project-form/project-form.com
 
 const routes: Routes = [
   {path : "home", component : HomeComponent},
-  {path : "search", component : SearchComponent}
+  {path : "search", component : SearchComponent},
+  {path : "criar-projeto", component : ProjectFormComponent}
 ];
 
 @NgModule({
