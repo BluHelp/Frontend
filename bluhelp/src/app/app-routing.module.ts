@@ -4,7 +4,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ProjectFormComponent } from './components/project-form/project-form.component';
 
 const routes: Routes = [
-  {path : "home", component : HomeComponent}c
+  {path : "home", component : HomeComponent},
+  {path : "search", component : SearchComponent}
 ];
 
 @NgModule({
