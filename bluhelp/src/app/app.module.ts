@@ -11,7 +11,9 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchComponent } from './components/search/search.component';
+import { ProjectProfileComponent } from './components/project-profile/project-profile.component';
 import { ExitSystemComponent } from './components/exit-system/exit-system.component';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { ExitSystemComponent } from './components/exit-system/exit-system.compon
     HeaderComponent,
     NavbarComponent,
     SearchComponent,
+    ProjectProfileComponent
     ExitSystemComponent
   ],
   imports: [

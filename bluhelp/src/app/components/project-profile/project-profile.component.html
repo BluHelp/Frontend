@@ -1,0 +1,89 @@
+<div class="container">
+    <div class="column-1">
+        <div class="row11">
+            <img src="" class="foto-projeto" width="550px" height="220px" alt="">
+        </div>
+        <div class="row22">
+            <div class="objective-icon">
+
+                <img src="../imagens/diamond-solid 2.svg" alt="">
+                <div class="objective-title">
+                    <h3>Objetivo</h3>
+                </div>
+            </div>
+            <div class="objective-text">
+                <p>
+                    {{project-view.objectiv}}
+                </p>
+            </div>
+            <div class="description-icon">
+                <img src="../imagens/file-pen-solid 1.svg" alt="">
+
+                <div class="description-title">
+                    <h3>Descrição</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row33">
+            <p>
+                {{project-view.description}}
+            </p>
+        </div>
+
+    </div>
+    <div class="column-2">
+        <div class="row-1">
+            <h1>
+                {{project-view.title}}
+            </h1>
+            <a routerLink="">
+                {{project-view.creatorName}}{{project-view.creatorSurname}}
+            </a>
+            <p>
+                Criado em: {{project-view.data}}
+            </p>
+            <p>
+                {{project-view.avaregeReview}}
+            </p>
+        </div>
+
+        <div class="row-2">
+            <div class="district-icon">
+                <img src="../imagens/Vector (25).svg" alt="">
+                <h3>Bairro</h3>
+            </div>
+            <div class="category-icon">
+                <img src="../imagens/list-ul-solid 1.svg" alt="">
+                <h3>
+                    {{project-view.}}
+                </h3>
+            </div>
+            <div class="status-icon">
+                <img src="../imagens/Vector (26).svg" alt="">
+                <h3>
+                    {{project-view.progress}}
+                </h3>
+            </div>
+        </div>
+        <div class="row-3">
+            <p>Avalie do projeto:</p>
+            <div class="contribution-icon">
+                <img src="../imagens/users-solid 1.svg" alt="">
+                <a routerLink="">Contribuições</a>
+            </div>
+
+            <div class="edit-delete-icon">
+                <div class="edit-icon">
+                    <a routerLink="" "> 
+                        <img src=" ../imagens/Vector (52).svg " alt=" ">
+                    </a>
+                </div>
+                <div class="delete-icon ">
+                    <a routerLink=" " ">
+                        <img src="../imagens/Vector (53).svg " alt=" ">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
