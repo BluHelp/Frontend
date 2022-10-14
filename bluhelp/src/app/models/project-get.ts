@@ -3,5 +3,5 @@ export interface ProjectGet {
     title: string;
     photo: string;
     avarageReview: number;
-    //progress
+    progress: number;
 }

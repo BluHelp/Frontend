@@ -22,8 +22,10 @@ export class ProjectService {
   getProject(id: number): Observable<ProjectView>{
     return this.client.get<ProjectView>(this.endpoint + 'id/');
   }
-  //getProjectsWithProgress
+  getProjectsWithProgress(progress: number): Observable<Array<ProjectGet>>{
+    return this.client.get<Array<ProjectGet>>(this.endpoint + 'progress/' + progress);
 
+  }
   getProjectsWithCategory(category: number): Observable<Array<ProjectGet>>{
     return this.client.get<Array<ProjectGet>>(this.endpoint + 'category/id/' + category);
   }
@@ -34,7 +36,7 @@ export class ProjectService {
     return this.client.get<Array<ProjectGet>>(this.endpoint + 'creator/name/surname' + name + surname);
   }
   getProjectsWithTitle(title: string): Observable<Array<ProjectGet>>{
-    return this.client.get<Array<ProjectGet>>(this.endpoint + 'title' + title);
+    return this.client.get<Array<ProjectGet>>(this.endpoint + 'title/' + title);
   }
   getTop4Projects(): Observable<Array<ProjectGet>>{
     return this.client.get<Array<ProjectGet>>(this.endpoint + '/default');
