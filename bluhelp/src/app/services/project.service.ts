@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Project } from '../models/project';
 import { ProjectGet } from '../models/project-get';
 import { ProjectView } from '../models/project-view';
-import { ProjectPhoto } from '../models/project-photo';
+
 
 @Injectable({
   providedIn: 'root'
