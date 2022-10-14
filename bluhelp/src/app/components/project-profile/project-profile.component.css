@@ -1,0 +1,155 @@
+h1 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.row-1 a {
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    grid-template-areas: "row11 row-1" "row22 row-2" "row33 row-3";
+    grid-gap: 120px;
+}
+
+.column-1 {
+    width: 550px;
+    margin-top: 20px;
+}
+
+.objective-title {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.objective-icon {
+    float: left;
+    vertical-align: top;
+}
+
+p {
+    text-align: justify;
+    clear: both;
+}
+
+.description-title {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.description-icon {
+    float: left;
+    vertical-align: top;
+}
+
+.district-icon h3 {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.category-icon h3 {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.status-icon h3 {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.contribution-icon {
+    display: inline-block;
+    margin-top: 20px;
+    border: 2px solid #002b9a;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.column-2 {
+    margin-top: 20px;
+}
+
+.row-1 {
+    grid-area: "row-1";
+    height: 220px;
+    margin-bottom: 15px;
+}
+
+.row-2 {
+    grid-area: "row-2";
+}
+
+.row-3 {
+    grid-area: "row-3";
+}
+
+.row-2 h3 {
+    margin-bottom: 30px;
+}
+
+.row-1 p {
+    margin-top: 30px;
+}
+
+.row11 {
+    grid-area: "row11";
+}
+
+.row22 {
+    grid-area: "row22";
+}
+
+.row33 {
+    grid-area: "row33";
+}
+
+.foto-projeto {
+    border: transparent solid 0px;
+    border-radius: 7px;
+}
+
+.edit-delete-icon {
+    margin-top: 20px;
+}
+
+.edit-icon {
+    display: inline-block;
+    border: #002b9a 2px solid;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.delete-icon {
+    display: inline-block;
+    border: #002b9a 2px solid;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.edit-icon:hover {
+    opacity: 0.6;
+}
+
+.delete-icon:hover {
+    opacity: 0.6;
+}
