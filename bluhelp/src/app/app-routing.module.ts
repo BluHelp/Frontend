@@ -1,3 +1,5 @@
+import { ExitSystemComponent } from './components/exit-system/exit-system.component';
+
 import { SearchComponent } from './components/search/search.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -7,7 +9,8 @@ import { ProjectFormComponent } from './components/project-form/project-form.com
 const routes: Routes = [
   {path : "home", component : HomeComponent},
   {path : "search", component : SearchComponent},
-  {path : "criarprojeto", component : ProjectFormComponent}
+  {path : "criarprojeto", component : ProjectFormComponent},
+  {path : "exitSystem", component : ExitSystemComponent}
 ];
 
 @NgModule({
