@@ -8,15 +8,18 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router : Router) { 
+  constructor(private router: Router) {
   }
 
   ngOnInit(): void {
   }
-  criarprojeto(){
+  criarprojeto() {
     this.router.navigate(['criarprojeto'])
   }
-  exitSystem(){
+  exitSystem() {
     this.router.navigate(['exitSystem'])
+  }
+  Profile() {
+    this.router.navigate(['Profile'])
   }
 }
