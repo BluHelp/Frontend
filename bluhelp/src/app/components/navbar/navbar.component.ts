@@ -22,4 +22,7 @@ export class NavbarComponent implements OnInit {
   Profile() {
     this.router.navigate(['Profile'])
   }
+  Search() {
+    this.router.navigate(['Search'])
+  }
 }
