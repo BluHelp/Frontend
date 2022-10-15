@@ -8,9 +8,9 @@ import { HomeComponent } from './components/home/home.component';
 import { ProjectFormComponent } from './components/project-form/project-form.component';
 
 const routes: Routes = [
-  { path: "home", component: HomeComponent },
+  { path: "Home", component: HomeComponent },
   { path: "Search", component: SearchComponent },
-  { path: "criarprojeto", component: ProjectFormComponent },
+  { path: "criarProjeto", component: ProjectFormComponent },
   { path: "exitSystem", component: ExitSystemComponent },
   { path: "Profile", component: UserProfileComponent }
 ];

@@ -13,8 +13,8 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  criarprojeto() {
-    this.router.navigate(['criarprojeto'])
+  criarProjeto() {
+    this.router.navigate(['criarProjeto'])
   }
   exitSystem() {
     this.router.navigate(['exitSystem'])
@@ -24,5 +24,8 @@ export class NavbarComponent implements OnInit {
   }
   Search() {
     this.router.navigate(['Search'])
+  }
+  Home() {
+    this.router.navigate(['Home'])
   }
 }

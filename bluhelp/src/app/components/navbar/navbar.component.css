@@ -1,21 +1,21 @@
-nav{
+nav {
     width: 100px;
     position: fixed;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-li{
-  margin-bottom: 70px;
+li {
+    margin-bottom: 70px;
 }
 
-.icon{
+.icon {
     margin-left: 30px;
 }
 
-.active{
+.active {
     border: #002B9A 1px solid;
     background-color: #002B9A;
     border-radius: 50%;
@@ -27,11 +27,11 @@ li{
     padding-top: 5px;
     margin-left: 25px;
 }
-.icon:hover{
+
+.icon:hover {
     opacity: 0.6;
 }
 
-.active:hover{
+.active:hover {
     opacity: 0.6;
 }
-
