@@ -13,6 +13,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchComponent } from './components/search/search.component';
 import { ProjectProfileComponent } from './components/project-profile/project-profile.component';
 import { ExitSystemComponent } from './components/exit-system/exit-system.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ExitSystemComponent } from './components/exit-system/exit-system.compon
     NavbarComponent,
     SearchComponent,
     ProjectProfileComponent,
-    ExitSystemComponent
+    ExitSystemComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
