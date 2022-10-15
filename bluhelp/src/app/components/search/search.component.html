@@ -1,1 +1,45 @@
-<p>search works!</p>
+<main>
+    <h1>Selecione suas preferências de busca</h1>
+
+    <form action="#">
+        <div class="inline">
+            <div class="form-input">
+                <input type="search" id="title" name="title" placeholder="Título">
+            </div>
+            <div class="form-input">
+                <input type="search" id="district" name="district" placeholder="Bairro">
+            </div>
+            <div class="form-input">
+                <input type="search" id="user" name="user" placeholder="Usuário">
+            </div>
+            <div class="form-input">
+                <select id="avaliação" name="avaliação">
+                    <option value="" disabled selected hidden>Avaliação</option>
+                    <option value="um">1</option>
+                    <option value="dois">2</option>
+                    <option value="três">3</option>
+                    <option value="quatro">4</option>
+                    <option value="cinco">5</option>
+                </select>
+            </div>
+        </div>
+        <div class="block">
+            <div class="form-input">
+                <select id="category" name="category">
+                    <option value="" disabled selected hidden> Categoria</option>
+                    <option value="paving">Pavimentação</option>
+                    <option value="ilumination">Iluminação</option>
+                </select>
+            </div>
+            <div class="form-input">
+                <select id="andamento" name="andamento">
+                    <option value="" disabled selected hidden>Andamento</option>
+                    <option value="in-progress">Em progresso</option>
+                    <option value="finished">Finalizado</option>
+                </select>
+            </div>
+            <button type="submit">Buscar</button>
+        </div>
+        </div>
+    </form>
+</main>
