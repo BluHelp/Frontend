@@ -1,3 +1,4 @@
+import { LoginComponent } from './components/login/login.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { ExitSystemComponent } from './components/exit-system/exit-system.component';
 
@@ -8,11 +9,12 @@ import { HomeComponent } from './components/home/home.component';
 import { ProjectFormComponent } from './components/project-form/project-form.component';
 
 const routes: Routes = [
+  { path: "", component: LoginComponent },
   { path: "Home", component: HomeComponent },
   { path: "Search", component: SearchComponent },
   { path: "criarProjeto", component: ProjectFormComponent },
-  { path: "exitSystem", component: ExitSystemComponent },
-  { path: "Profile", component: UserProfileComponent }
+  { path: "Profile", component: UserProfileComponent },
+  { path: "exitSystem", component: ExitSystemComponent }
 ];
 
 @NgModule({

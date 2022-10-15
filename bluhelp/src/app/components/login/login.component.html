@@ -1,0 +1,26 @@
+<h1>Bem-Vindo!</h1>
+
+<div class="form">
+    <form action="#" method="POST">
+        <div id="email">
+            <div class="form-box">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+        </div>
+
+        <div id="password">
+            <div class="form-box">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" size="10" minlength="4" required />
+            </div>
+        </div>
+
+        <div id="submit">
+            <button class="button" (click)="home()"><span>Logar</span></button>
+        </div>
+    </form>
+</div>
+<div class="login">
+    <p>Não possui cadastro?<a (click)="cadastro()">Clique aqui</a></p>
+</div>
