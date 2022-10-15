@@ -24,7 +24,7 @@ import { ExitSystemComponent } from './components/exit-system/exit-system.compon
     HeaderComponent,
     NavbarComponent,
     SearchComponent,
-    ProjectProfileComponent
+    ProjectProfileComponent,
     ExitSystemComponent
   ],
   imports: [

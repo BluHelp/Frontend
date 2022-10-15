@@ -1,49 +1,48 @@
+<div class="menu">
+    <ul>
+        <li id="menu-bar">
+            <div class="icon">
+                <img src="../../../assets/bars-solid.png" alt="">
+            </div>
 
-    <div class="menu">
-        <ul>
-            <li id="menu-bar">
+        </li>
+
+        <li>
+            <a routerLink="home">
                 <div class="icon">
-                    <img src="../../../assets/bars-solid.png" alt="">
+                    <img src="../../../assets/home.png" alt="">
                 </div>
+            </a>
+        </li>
 
-            </li>
-
-            <li>
-                <a routerLink="home">
-                    <div class="icon">
-                        <img src="../../../assets/home.png" alt="">
-                    </div>
+        <li>
+            <div class="icon">
+                <a href="search">
+                    <img src="../../../assets/search.png" alt="">
                 </a>
-            </li>
 
-            <li>
+            </div>
+        </li>
+        <li>
+            <a>
                 <div class="icon">
-                    <a href="search">
-                        <img src="../../../assets/search.png" alt="">
-                    </a>
-                
+                    <img (click)="criarprojeto()" src="../../../assets/more.svg" alt="#">
                 </div>
-            </li>
-            <li>
-                <a>
-                    <div class="icon" >
-                        <img (click)="criarprojeto()" src="../../../assets/more.svg" alt="#" >
-                    </div>
+            </a>
+        </li>
+        <li>
+            <div class="icon">
+                <a href="#">
+                    <img (click)="Profile()" src="../../../assets/profile.png" alt="">
                 </a>
-            </li>
-            <li>
-                <div class="icon">
-                    <a href="#">
-                        <img src="../../../assets/profile.png" alt="">
-                    </a>
-                </div>
-            </li>
-            <li>
-                <div class="icon">
-                    <a href="#">
-                        <img (click)="exitSystem()" src="../../../assets/exit.png" alt="">
-                    </a>
-                </div>
-            </li>
-        </ul>
-    </div>
+            </div>
+        </li>
+        <li>
+            <div class="icon">
+                <a href="#">
+                    <img (click)="exitSystem()" src="../../../assets/exit.png" alt="">
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
