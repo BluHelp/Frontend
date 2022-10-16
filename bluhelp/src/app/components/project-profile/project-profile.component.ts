@@ -21,7 +21,7 @@ projectview : ProjectView = {
   district:"", 
   description:"", 
   categories:[],
-  progress:0,
+  progress: 0,
   photo:"", 
   date:"",
   avarageReview:0,
