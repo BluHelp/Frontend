@@ -15,7 +15,7 @@
 
  .d2 input, select{
     width: 500px;
-    background: url(../../../assets/categoria.svg) no-repeat 5px 10px;
+    background: url(../../../assets/category.svg) no-repeat 5px 10px;
     height: 60px;
     border: 3px solid #002b9a;
     border-radius: 7px;
@@ -28,7 +28,7 @@
     border-radius: 7px;
     padding-left: 45px;
     width: 500px;
-    background: url(../../../assets/lapis.svg) no-repeat 5px 10px;
+    background: url(../../../assets/pencil.svg) no-repeat 5px 10px;
 }
 
 .d2{
@@ -78,7 +78,7 @@
  }
  
  .nextbtn span:after {
-     content: url(../../../assets/seta-direita.svg);
+     content: url(../../../assets/right-arrow.svg);
      position: absolute;
      opacity: 0;
      top: 0;
@@ -97,7 +97,7 @@
  }
  
  .nextbtn span:after {
-    content: url(../../../assets/seta-esquerda.svg);
+    content: url(../../../assets/left-arrow.svg);
     position: absolute;
     opacity: 0;
     top: 0;

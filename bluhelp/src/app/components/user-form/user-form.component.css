@@ -63,18 +63,16 @@ form input {
 
 #nome input {
     width: 238px;
-    background: url(../../../assets/nome-user.svg) no-repeat 5px 10px;
+   
 }
 
 #sobrenome input {
     width: 238px;
-    background: url(../../../assets/sobrenome.svg) no-repeat 5px 10px;
+  
 
 }
 
-#cpf input {
-    background: url(../../../assets/cpf.svg) no-repeat 5px 12px;
-}
+
 
 .widthmaior input {
     width: 496px;
