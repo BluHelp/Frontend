@@ -1,6 +1,7 @@
 export interface Project {
     id: number;
     creator: number;
+    address: number;
     title: string;
     objective: string;
     description: string;

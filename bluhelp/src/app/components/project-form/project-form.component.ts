@@ -14,6 +14,7 @@ export class ProjectFormComponent implements OnInit {
   project: Project = {
     id: 0,
     creator: 0,
+    address: 0,
     title: "",
     objective: "",
     description: "",
