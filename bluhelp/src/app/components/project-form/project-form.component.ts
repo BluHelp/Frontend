@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from 'src/app/models/project';
 import { ProjectService } from 'src/app/services/project.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-project-form',
@@ -9,25 +10,27 @@ import { ProjectService } from 'src/app/services/project.service';
 })
 export class ProjectFormComponent implements OnInit {
 
+  
+
   steps: any = 1;
 
   project: Project = {
     id: 0,
-    creator: 0,
-    address: 0,
+    creator: JSON.parse(this.userService.getUser()).id,
     title: "",
     objective: "",
     description: "",
     photo: "",
     categories: [],
     street: "",
+    streetType: "",
     number: 0,
     district: "",
     cep: "",
     reference: ""
    } 
 
-  constructor(private service: ProjectService) { }
+  constructor(private service: ProjectService, private userService: UserService) { }
 
   ngOnInit(): void {
   }

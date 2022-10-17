@@ -1,5 +1,5 @@
 <form (ngSubmit)="submit()" #projectForm="ngForm">
- 
+ {{ project | json }}
  <div *ngIf="steps == 1">
  <div class="passo2">
     <p>Passo 2 - Informações do Projeto</p>
@@ -15,7 +15,7 @@
     <div class="d1">
         <div class="l1">
             <div>
-            <label for=title>Título</label>
+            <label for="title">Título</label>
         </div>
             <input type="text" id="title" name="title" [(ngModel)]="project.title"/>
         </div>
@@ -54,7 +54,7 @@
     <div class="d1">
         <div class="l1">
             <div>
-            <label for=description>Descrição</label>
+            <label for="description">Descrição</label>
         </div>
             <input type="text" id="description" name="description" [(ngModel)]="project.description" />
         </div>
@@ -63,7 +63,7 @@
     <div class="d2">
         <div class="l2">
             <div>
-            <label for=objective>Objetivo</label>
+            <label for="objective">Objetivo</label>
         </div>
             <input type="text" id="objective" name="objective" [(ngModel)]="project.objective"/>
         </div>
@@ -88,7 +88,7 @@
         <div class="d11">
             <div class="l11">
                 <div>
-                    <label for=cep>CEP</label>
+                    <label for="cep">CEP</label>
                 </div>
                 <input type="text" id="cep" name="cep" [(ngModel)]="project.cep"/>
             </div>
@@ -98,16 +98,17 @@
         <div class="d22">
             <div class="l22">
                 <div>
-                    <label for=street>Logradouro</label>
+                    <label for="street">Logradouro</label>
                 </div>
-                <input type="text" id="street" [(ngModel)]="project.street" />
+                <input type="text" id="street" name="streetType" [(ngModel)]="project.street" />
             </div>
         </div>
+        <input type="text" id="streetType" name="streetType" [(ngModel)]="project.streetType" />
 
         <div class="d33">
             <div class="l33">
                 <div>
-                    <label for=number>Número</label>
+                    <label for="number">Número</label>
                 </div>
                 <input type="text" id="number" name="number" [(ngModel)]="project.number"/>
             </div>
@@ -118,7 +119,7 @@
         <div class="d44">
             <div class="l44">
                 <div>
-                    <label for=district>Bairro</label>
+                    <label for="district">Bairro</label>
                 </div>
                 <input type="text" id="district" name="district" [(ngModel)]="project.district" />
             </div>
@@ -128,7 +129,7 @@
         <div class="d66">
             <div class="l66">
                 <div>
-                    <label for=reference>Complemento</label>
+                    <label for="reference">Complemento</label>
                 </div>
                 <input type="text" id="reference" name="reference" [(ngModel)]="project.reference"/>
             </div>
@@ -148,7 +149,7 @@
     <button type="submit" class="next1" *ngIf="steps == 1" (click)="steps = steps + 1">Avançar</button>
 </div>
 <div class="botao">
-    <a routerLink="/project"><button type="button" class="register" *ngIf="steps == 3" (click)="doRegister()">Cadastrar</button></a>
+    <a><button type="button" class="register" *ngIf="steps == 3" (click)="doRegister()">Cadastrar</button></a>
 </div>
 </div>
 

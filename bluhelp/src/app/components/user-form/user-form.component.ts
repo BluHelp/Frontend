@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user.service';
 
@@ -11,9 +12,9 @@ export class UserFormComponent implements OnInit {
 
   steps: any = 1;
 
-  user: User = {name: "", surname: "", password: "", cpf: "", photo:"", email: "", phone: ""}
+  user: User = { name: "", surname: "", password: "", cpf: "", photo:"", email: "", phone: ""}
 
-  constructor(private service: UserService) { }
+  constructor(private service: UserService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -22,7 +23,15 @@ export class UserFormComponent implements OnInit {
   }
 
   doRegister(): void {
-    this.service.addUser(this.user).subscribe(data => { this.user = data;});
+    this.service.addUser(this.user).subscribe(data => {
+       this.user = data;
+       let userAutenticado = {
+        id: data.id
+      } 
+      this.service.setUser(userAutenticado)
+      this.router.navigate(['Home/' + data.id])
+      
+      });
   }
 
 }
