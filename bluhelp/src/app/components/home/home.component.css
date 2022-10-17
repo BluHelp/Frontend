@@ -1,0 +1,40 @@
+h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 80px;
+}
+
+.cards img {
+    width: 240px;
+    height: 240px;
+    border-radius: 10px 10px 0 0;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.cards a {
+    text-decoration: none;
+    color: black;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card {
+    width: 245px;
+    height: 352px;
+    border: #002b9a 3px solid;
+    border-radius: 10px;
+    margin-right: 20px;
+}
