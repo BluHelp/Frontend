@@ -14,6 +14,7 @@ import { SearchComponent } from './components/search/search.component';
 import { ProjectProfileComponent } from './components/project-profile/project-profile.component';
 import { ExitSystemComponent } from './components/exit-system/exit-system.component';
 import { LoginComponent } from './components/login/login.component';
+import { ModalOptionsComponent } from './components/modal-options/modal-options.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { LoginComponent } from './components/login/login.component';
     SearchComponent,
     ProjectProfileComponent,
     ExitSystemComponent,
-    LoginComponent
+    LoginComponent,
+    ModalOptionsComponent
   ],
   imports: [
     BrowserModule,
