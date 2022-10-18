@@ -14,8 +14,8 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  criarProjeto() {
-    this.router.navigate(['criarProjeto/' + this.actRouter.snapshot.params['id']])
+  CreateProject() {
+    this.router.navigate(['CreateProject/' + this.actRouter.snapshot.params['id']])
   }
   exitSystem() {
     this.router.navigate(['exitSystem'])
