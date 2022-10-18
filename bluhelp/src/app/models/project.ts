@@ -7,7 +7,6 @@ export interface Project {
     categories: Array<number>;
     photo: string;
     street: string;
-    streetType: string
     number: number;
     district: string;
     cep: string;

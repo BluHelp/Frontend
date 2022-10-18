@@ -25,7 +25,6 @@ export class ProjectFormComponent implements OnInit {
     photo: "",
     categories: [],
     street: "",
-    streetType: "",
     number: 0,
     district: "",
     cep: "",
