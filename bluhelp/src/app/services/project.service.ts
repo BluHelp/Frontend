@@ -24,7 +24,6 @@ export class ProjectService {
   }
   getProjectsWithProgress(progress: number): Observable<Array<ProjectGet>>{
     return this.client.get<Array<ProjectGet>>(this.endpoint + 'progress/' + progress);
-
   }
   getProjectsWithCategory(category: number): Observable<Array<ProjectGet>>{
     return this.client.get<Array<ProjectGet>>(this.endpoint + 'category/id/' + category);

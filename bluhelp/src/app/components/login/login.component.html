@@ -17,10 +17,15 @@
         </div>
 
         <div id="submit">
-            <button class="button"><span>Logar</span></button>
+            <a [routerLink]="['/Home/:id']"></a><button class="button"><span>Logar</span></button>
         </div>
     </form>
 </div>
 <div class="login">
-    <p>Não possui cadastro?<a>Clique aqui</a></p>
+
+    <p>Não possui cadastro?<a [routerLink]="['/Cadastro']">Clique aqui</a></p>
+
+    
+  
+
 </div>

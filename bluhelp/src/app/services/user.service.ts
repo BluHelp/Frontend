@@ -9,12 +9,20 @@ import { ProjectGet } from '../models/project-get';
 })
 export class UserService {
 
+  public getUser(): any {
+    return localStorage.getItem('user')
+  }
+
+  public setUser(user: any){
+    localStorage.setItem('user', JSON.stringify(user))
+  }
+
   private endpoint = 'http://localhost:8080/user/'
 
   constructor(private client: HttpClient) { }
 
-  addUser(user: User): Observable<User> {
-    return this.client.post<User>(this.endpoint, user);
+  addUser(user: User): Observable<any> {
+    return this.client.post<any>(this.endpoint, user);
   }
   updateUser(user: User, id: number): Observable<string> {
     return this.client.put<string>(this.endpoint + id, user);
@@ -25,6 +33,7 @@ export class UserService {
   getUserWithProjects(id: number): Observable<ProjectGet> {
     return this.client.get<ProjectGet>(this.endpoint + id);
   }
+
 
 
 }

@@ -1,4 +1,4 @@
-
+{{ user | json }}
 
 
 <form (ngSubmit)="submit()" #userForm="ngForm">
@@ -102,9 +102,9 @@
     <button type="submit" class="avançar" *ngIf="steps != 3" (click)="steps = steps + 1">Avançar</button>
 </div>
 <div class="botao">
-    <a routerLink="/login"><button type="button" class="avançar" *ngIf="steps == 3" (click)="doRegister()">Cadastrar</button></a>
+    <button type="button" class="avançar" *ngIf="steps == 3" (click)="doRegister()">Cadastrar</button>
 </div>
 
 <div class="login" *ngIf="steps == 1">
-    <p>Já possui cadastro? <a routerLink="/login">Fazer login</a></p>
+    <p>Já possui cadastro? <a [routerLink]="['']">Fazer login</a></p>
 </div>
