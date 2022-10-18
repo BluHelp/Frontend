@@ -14,13 +14,13 @@ import { ProjectProfileComponent } from './components/project-profile/project-pr
 const routes: Routes = [
 
   { path: "", component: LoginComponent },
-  { path: "Register", component: UserFormComponent },
-  { path: "Home/:id", component: HomeComponent },
-  { path: "Search", component: SearchComponent },
-  { path: "CreateProject/:id", component: ProjectFormComponent },
-  { path: "Profile", component: UserProfileComponent },
-  { path: "ProjectProfile", component: ProjectProfileComponent},
-  { path: "exitSystem", component: ExitSystemComponent }
+  { path: "register", component: UserFormComponent },
+  { path: "home/:id", component: HomeComponent },
+  { path: "search", component: SearchComponent },
+  { path: "create-project/:id", component: ProjectFormComponent },
+  { path: "profile", component: UserProfileComponent },
+  { path: "project-profile", component: ProjectProfileComponent},
+  { path: "exit-system", component: ExitSystemComponent }
 ];
 
 @NgModule({
