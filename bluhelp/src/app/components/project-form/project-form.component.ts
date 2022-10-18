@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Project } from 'src/app/models/project';
 import { ProjectService } from 'src/app/services/project.service';
 import { UserService } from 'src/app/services/user.service';
+
 
 @Component({
   selector: 'app-project-form',
@@ -29,10 +31,13 @@ export class ProjectFormComponent implements OnInit {
     cep: "",
     reference: ""
    } 
+   
 
-  constructor(private service: ProjectService, private userService: UserService) { }
+  constructor(private service: ProjectService, private userService: UserService, private activatedRoute: ActivatedRoute) { }
+
 
   ngOnInit(): void {
+    
   }
   submit(){
     this.steps += 1;

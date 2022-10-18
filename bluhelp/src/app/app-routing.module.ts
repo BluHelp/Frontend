@@ -11,8 +11,9 @@ import { LoginComponent } from './components/login/login.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 
 const routes: Routes = [
+
   { path: "", component: LoginComponent },
-  { path: "cadastro", component: UserFormComponent },
+  { path: "Cadastro", component: UserFormComponent },
   { path: "Home/:id", component: HomeComponent },
   { path: "Search", component: SearchComponent },
   { path: "criarProjeto/:id", component: ProjectFormComponent },
