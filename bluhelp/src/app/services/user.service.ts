@@ -17,6 +17,10 @@ export class UserService {
     localStorage.setItem('user', JSON.stringify(user))
   }
 
+  loginUser(holder:any): Observable<Number>{
+    return this.client.post<Number>(this.endpoint + 'login', holder)
+  }
+
   private endpoint = 'http://localhost:8080/user/'
 
   constructor(private client: HttpClient) { }

@@ -1,23 +1,23 @@
 <h1>Bem-Vindo!</h1>
 
 <div class="form">
-    <form action="#" method="POST">
+    <form #formLogin="ngForm">
         <div id="email">
             <div class="form-box">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
+                <input type="email" id="email" name="email" [(ngModel)]="holder.email" required />
             </div>
         </div>
 
         <div id="password">
             <div class="form-box">
                 <label for="password">Senha</label>
-                <input type="password" id="password" name="password" size="10" minlength="4" required />
+                <input type="password" id="password" [(ngModel)]="holder.password" name="password" size="10" minlength="4" required />
             </div>
         </div>
 
         <div id="submit">
-            <a [routerLink]="['home/']"></a><button class="button"><span>Logar</span></button>
+            <button class="button" [disabled]="formLogin.form.valid" (click)="login()">Logar</button>
         </div>
     </form>
 </div>
