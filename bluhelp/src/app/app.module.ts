@@ -16,6 +16,7 @@ import { ExitSystemComponent } from './components/exit-system/exit-system.compon
 import { LoginComponent } from './components/login/login.component';
 import { ModalOptionsComponent } from './components/modal-options/modal-options.component';
 import { ContributionsComponent } from './components/contributions/contributions.component';
+import { ModalPhotoComponent } from './components/modal-photo/modal-photo.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ContributionsComponent } from './components/contributions/contributions
     ExitSystemComponent,
     LoginComponent,
     ModalOptionsComponent,
-    ContributionsComponent
+    ContributionsComponent,
+    ModalPhotoComponent
   ],
   imports: [
     BrowserModule,
