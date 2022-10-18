@@ -15,6 +15,7 @@ import { ProjectProfileComponent } from './components/project-profile/project-pr
 import { ExitSystemComponent } from './components/exit-system/exit-system.component';
 import { LoginComponent } from './components/login/login.component';
 import { ModalOptionsComponent } from './components/modal-options/modal-options.component';
+import { ContributionsComponent } from './components/contributions/contributions.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ModalOptionsComponent } from './components/modal-options/modal-options.
     ProjectProfileComponent,
     ExitSystemComponent,
     LoginComponent,
-    ModalOptionsComponent
+    ModalOptionsComponent,
+    ContributionsComponent
   ],
   imports: [
     BrowserModule,
