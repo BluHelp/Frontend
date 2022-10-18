@@ -10,6 +10,8 @@ import { ProjectFormComponent } from './components/project-form/project-form.com
 import { LoginComponent } from './components/login/login.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { ProjectProfileComponent } from './components/project-profile/project-profile.component';
+import { ModalInformationComponent } from './components/modal-information/modal-information.component';
+import { ModalPhotoComponent } from './components/modal-photo/modal-photo.component';
 
 const routes: Routes = [
 
@@ -20,7 +22,9 @@ const routes: Routes = [
   { path: "CreateProject/:id", component: ProjectFormComponent },
   { path: "Profile", component: UserProfileComponent },
   { path: "ProjectProfile", component: ProjectProfileComponent},
-  { path: "exitSystem", component: ExitSystemComponent }
+  { path: "exitSystem", component: ExitSystemComponent },
+  { path: "info", component: ModalInformationComponent },
+  { path: "photo", component: ModalPhotoComponent},
 ];
 
 @NgModule({
