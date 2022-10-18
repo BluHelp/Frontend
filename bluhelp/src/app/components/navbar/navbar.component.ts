@@ -1,3 +1,4 @@
+import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -9,24 +10,26 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   constructor(private router: Router,
-              private actRouter: ActivatedRoute) {
+              private actRouter: ActivatedRoute,
+              private userService: UserService
+              ) {
   }
 
   ngOnInit(): void {
   }
   CreateProject() {
-    this.router.navigate(['CreateProject/' + this.actRouter.snapshot.params['id']])
+    this.router.navigate(['create-project/' + JSON.parse(this.userService.getUser()).id])
   }
   exitSystem() {
-    this.router.navigate(['exitSystem'])
+    this.router.navigate(['exit-system'])
   }
   Profile() {
-    this.router.navigate(['Profile'])
+    this.router.navigate(['profile'])
   }
   Search() {
-    this.router.navigate(['Search'])
+    this.router.navigate(['search'])
   }
   Home() {
-    this.router.navigate(['Home/:id'])
+    this.router.navigate(['home/' + JSON.parse(this.userService.getUser()).id])
   }
 }

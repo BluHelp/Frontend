@@ -29,7 +29,7 @@ export class UserFormComponent implements OnInit {
         id: data.id
       } 
       this.service.setUser(userAutenticado)
-      this.router.navigate(['Home/' + data.id])
+      this.router.navigate(['home/' + data.id])
       
       });
   }
