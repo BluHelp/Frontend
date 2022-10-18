@@ -4,16 +4,16 @@
     <form action="#">
         <div class="inline">
             <div class="form-input">
-                <input type="search" id="title" name="title" placeholder="Título">
+                <input type="search" id="title" name="title" placeholder="Título" #searchByName>
             </div>
             <div class="form-input">
-                <input type="search" id="district" name="district" placeholder="Bairro">
+                <input type="search" id="district" name="district" placeholder="Bairro" #searchByNeighborhood>
             </div>
             <div class="form-input">
-                <input type="search" id="user" name="user" placeholder="Usuário">
+                <input type="search" id="user" name="user" placeholder="Usuário" #searchByUser>
             </div>
             <div class="form-input">
-                <select id="avaliação" name="avaliação">
+                <select id="avaliação" name="avaliação" #searchAvaliacao>
                     <option value="" disabled selected hidden>Avaliação</option>
                     <option value="um">1</option>
                     <option value="dois">2</option>
@@ -25,14 +25,14 @@
         </div>
         <div class="block">
             <div class="form-input">
-                <select id="category" name="category">
+                <select id="category" name="category" #searchByCategory>
                     <option value="" disabled selected hidden> Categoria</option>
                     <option value="paving">Pavimentação</option>
                     <option value="ilumination">Iluminação</option>
                 </select>
             </div>
             <div class="form-input">
-                <select id="andamento" name="andamento">
+                <select id="andamento" name="andamento" #searchByProgress>
                     <option value="" disabled selected hidden>Andamento</option>
                     <option value="finished">Finalizado</option>
                 </select>
