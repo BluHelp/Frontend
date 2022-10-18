@@ -5,7 +5,7 @@
 
         <img src="./img/perfil grande.svg" alt="Foto de perfil" width="100" height="100" id="fotoPerfil">
 
-                    
+
         <h2><span>{{userget.name}}</span></h2>
 
 
@@ -38,61 +38,46 @@
 
     <div class="column-2">
 
-        <div class="projetos">
-
-
-        </div>
+        <ul class="tab-container">
+            <li (click)="onTabClick('Projetos Criados')" [class.active]="ActiveTab == 'Projetos Criados'"
+                class="tab-link">Projetos Criados</li>
+            <li (click)="onTabClick('Projetos Colaborados')" [class.active]="ActiveTab == 'Projetos Colaborados'"
+                class="tab-link">Projetos Colaborados</li>
+        </ul>
 
 
         <div class="cards">
 
-            <div class="column-1">
-                <h3 class="projetos-criados">Projetos Criados</h3>
-                <div class="card1">
+
+            <div *ngIf="ActiveTab == 'Projetos Criados' " class="TabCriados">
+                <div class="column-1">
+                    <div class="card1">
 
 
-                    <img src="{{projectget.photo}}"
-                        alt="" id="project-img">
-                    <p class="title">{{projectget.title}}</p>
-                    <div class="more">
-                        <p>{{projectget.avarageReview}}</p>
-                        <img src="./img/Vector (73).svg" alt="">
+                        <img src="{{projectget.photo}}" alt="" id="project-img">
+                        <p class="title">{{projectget.title}}</p>
+                        <div class="more">
+                            <p>{{projectget.avarageReview}}</p>
+                            <img src="./img/Vector (73).svg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="coluna-2">
-                <h3>Projetos Colaborados</h3>
-                <div class="card1">
+
+            <div *ngIf="ActiveTab == 'Projetos Colaborados' " class="TabColaborados">
+                <div class="coluna-2">
+                    <div class="card1">
 
 
-                    <img src="{{projectget.photo}}"
-                        alt="" id="project-img">
-                    <p class="title">{{projectget.title}}</p>
-                    <div class="more">
-                        <p>{{projectget.avarageReview}}</p>
-                        <img src="./img/Vector (73).svg" alt="">
+                        <img src="{{projectget.photo}}" alt="" id="project-img">
+                        <p class="title">{{projectget.title}}</p>
+                        <div class="more">
+                            <p>{{projectget.avarageReview}}</p>
+                            <img src="./img/Vector (73).svg" alt="">
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="card1">
-                <img src="{{projectget.photo}}"
-                    alt="" id="project-img">
-                <p class="title">{{projectget.title}}</p>
-                <div class="more">
-                    <p>{{projectget.avarageReview}}</p>
-                    <img src="./img/Vector (73).svg" alt="">
-                </div>
-            </div>
-            <div class="card1">
-                <img src="{{projectget.photo}}"
-                    alt="" id="project-img">
-                <p class="title">{{projectget.title}}</p>
-                <div class="more">
-                    <p>{{projectget.avarageReview}}</p>
-                    <img src="./img/Vector (73).svg" alt="">
                 </div>
             </div>
         </div>
     </div>
-
 </div>
