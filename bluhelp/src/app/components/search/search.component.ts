@@ -12,4 +12,27 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getProjects(){
+    
+  }
+
+  searchByProjectName(){
+    
+  }
+  
+  searchByNeighborhood(){
+  }
+  
+  searchByUserName(){
+  }
+  
+  searchByAvaliacao(){
+  }
+
+  searchByCategory(){
+  }
+
+  searchByProgress(){
+  }
+
 }

@@ -20,6 +20,4 @@ export class ContributionService {
   deleteUser(id: number): Observable<string> {
     return this.client.delete<string>(this.endpoint + id);
   }
-  
-
 }
