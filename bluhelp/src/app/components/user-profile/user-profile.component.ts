@@ -29,6 +29,10 @@ projects : []
   avarageReview : 0,
   progress : 0
  }
+ActiveTab:string = 'Projetos Criados'
+ onTabClick(tab){
+  this.ActiveTab = tab;
+ }
  
   constructor(private route: ActivatedRoute) { }
 
