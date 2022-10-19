@@ -69,11 +69,13 @@ form input {
 }
 
 #submit span:after {
+    content: url(../../../assets/right-arrow.svg);
     position: absolute;
     opacity: 0;
     top: 0;
     right: -20px;
     transition: 0.5s;
+    transform: scaleX(-1);
 }
 
 #submit:hover span {
