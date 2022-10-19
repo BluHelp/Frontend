@@ -21,7 +21,8 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['create-project/' + JSON.parse(this.userService.getUser()).id])
   }
   exitSystem() {
-    this.router.navigate(['exit-system'])
+    localStorage.clear()
+    this.router.navigate([''])
   }
   Profile() {
     this.router.navigate(['profile'])

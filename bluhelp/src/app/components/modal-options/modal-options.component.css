@@ -10,6 +10,7 @@
     animation: animate;
     animation-duration: 800ms;
     border-radius: 3%;
+    background-color: silver;
 }
 
 .conteudoModal {

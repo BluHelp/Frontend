@@ -10,11 +10,16 @@ import { ProjectFormComponent } from './components/project-form/project-form.com
 import { LoginComponent } from './components/login/login.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { ProjectProfileComponent } from './components/project-profile/project-profile.component';
+
 import { ContributionsComponent } from './components/contributions/contributions.component';
+
+
 
 const routes: Routes = [
 
   { path: "", component: LoginComponent },
+  { path: "info", component: ModalInformationComponent },
+  { path: "photo", component: ModalPhotoComponent},
   { path: "register", component: UserFormComponent },
   { path: "home/:id", component: HomeComponent },
   { path: "search", component: SearchComponent },
