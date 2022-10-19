@@ -1,3 +1,4 @@
+import { UserService } from './../../services/user.service';
 import { ProjectGet } from './../../models/project-get';
 import { UserGet } from './../../models/user-get';
 import { Component, OnInit } from '@angular/core';
@@ -22,6 +23,7 @@ email : "",
 phone : "",
 projects : []
  }
+
  projectget : ProjectGet = {
   id : 0,
   title : "",
@@ -34,7 +36,7 @@ ActiveTab:string = 'Projetos Criados'
   this.ActiveTab = tab;
  }
  
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private userService: UserService) { }
 
   ngOnInit(): void {
   }
