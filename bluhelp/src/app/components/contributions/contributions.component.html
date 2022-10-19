@@ -1,36 +1,31 @@
 <main>
+  <h1>Contribuições</h1>
 
-    <h1>
-        Contribuições
-    </h1>
-
-    <div class="contribuicoes">
-
-        <div class="colum-1">
-            <div class="column-0">
-               
-                <div class="row-1-2">
-                    <div class="row-1">
-                        <a href="">Usuario0123</a>
-                    </div>
-                    <p class="row-2"> Projetamento muito interessante!</p>
-                </div>
+  <div class="contribuicoes">
+    <div *ngFor="let contribution of contributionGet">
+      <div class="colum-1">
+        <div class="column-0">
+          <div class="row-1-2">
+            <div class="row-1">
+              <a href="">{{ contribution.user.name }}</a>
             </div>
+            <p class="row-2">{{ contribution.content }}</p>
+          </div>
         </div>
-        <div class="column-2">
-            <p class="row-1">22/07/2050 17:50</p>
-           
-        </div>
-
+      </div>
+      <div class="column-2">
+        <p class="row-1">{{contribution.date}}</p>
+      </div>
     </div>
-
+  </div>
 </main>
 
 <div>
-   
-        <div class="text-area">
-            <textarea placeholder="Contribuir"></textarea>
-  
-    <button type="button" (click)="doRegister()"><img src="../../../assets/contribution-arrow.svg" alt="BluHelp"></button>
-</div>
+  <div class="text-area">
+    <textarea placeholder="Contribuir"></textarea>
+
+    <button type="button" (click)="doRegister()">
+      <img src="../../../assets/contribution-arrow.svg" alt="BluHelp" />
+    </button>
+  </div>
 </div>
