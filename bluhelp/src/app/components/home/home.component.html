@@ -1,19 +1,22 @@
-<h1>Projetos em Destaque</h1>
+<main>
 
-<div class="cards">
-    <div class="card">
-        <form>
-            <a>
-                <img src="" class="img" alt="Foto do Projeto">
-                <div class="text-1">
-                    <h3>
-                       
-                    </h3>
-                </div>
-                <p>
-                   
-                </p>
-            </a>
-        </form>
-    </div>
-</div>
+    <h1>Projetos em destaque</h1>
+
+    <section>
+        <div class="cards">
+            <div class="card">
+                <form>
+                    <a href="">
+                        <img {{projectget.photo}}
+                            class="img" alt="Foto do Projeto">
+                        <div class="text-1">
+                            <h3><a href="">{{projectget.title}}</a></h3>
+                        </div>
+                        <p>{{projectget.avarageReview}}</p>
+                    </a>
+                </form>
+            </div>
+        </div>
+
+    </section>
+</main>

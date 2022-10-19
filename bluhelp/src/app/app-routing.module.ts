@@ -18,8 +18,6 @@ import { ContributionsComponent } from './components/contributions/contributions
 const routes: Routes = [
 
   { path: "", component: LoginComponent },
-  { path: "info", component: ModalInformationComponent },
-  { path: "photo", component: ModalPhotoComponent},
   { path: "register", component: UserFormComponent },
   { path: "home/:id", component: HomeComponent },
   { path: "search", component: SearchComponent },
