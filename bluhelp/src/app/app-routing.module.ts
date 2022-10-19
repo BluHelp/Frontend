@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: "home/:id", component: HomeComponent },
   { path: "search", component: SearchComponent },
   { path: "create-project/:id", component: ProjectFormComponent },
-  { path: "profile", component: UserProfileComponent },
+  { path: "profile/:id", component: UserProfileComponent },
   { path: "project-profile/:idproject", component: ProjectProfileComponent},
   { path: "exit-system", component: ExitSystemComponent },
   { path: "contributions/:id", component: ContributionsComponent}
