@@ -40,11 +40,11 @@ form input {
 }
 
 #email input {
-    background: url(../../../assets/) no-repeat 5px 10px;
+    background: url(../../../assets/email.svg) no-repeat 5px 10px;
 }
 
 #password input {
-    background: no-repeat 5px 10px;
+    background: url(../../../assets/password.svg) no-repeat 5px 10px;
 }
 
 .button {
