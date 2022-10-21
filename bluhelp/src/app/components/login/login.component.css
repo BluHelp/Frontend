@@ -40,11 +40,11 @@ form input {
 }
 
 #email input {
-    background: url(../../../assets/) no-repeat 5px 10px;
+    background: url(../../../assets/email.svg) no-repeat 5px 10px;
 }
 
 #password input {
-    background: no-repeat 5px 10px;
+    background: url(../../../assets/password.svg) no-repeat 5px 10px;
 }
 
 .button {
@@ -69,11 +69,13 @@ form input {
 }
 
 #submit span:after {
+    content: url(../../../assets/right-arrow.svg);
     position: absolute;
     opacity: 0;
     top: 0;
     right: -20px;
     transition: 0.5s;
+    transform: scaleX(-1);
 }
 
 #submit:hover span {

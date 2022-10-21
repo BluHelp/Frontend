@@ -25,7 +25,7 @@ export class NavbarComponent implements OnInit {
     this.router.navigate([''])
   }
   Profile() {
-    this.router.navigate(['profile'])
+    this.router.navigate(['profile/' + JSON.parse(this.userService.getUser()).id])
   }
   Search() {
     this.router.navigate(['search'])
