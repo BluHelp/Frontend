@@ -19,6 +19,7 @@ import { ContributionsComponent } from './components/contributions/contributions
 import { ModalInformationComponent } from './components/modal-information/modal-information.component';
 import { ModalPhotoComponent } from './components/modal-photo/modal-photo.component';
 import { ImageComponent } from './components/image/image.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { ImageComponent } from './components/image/image.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

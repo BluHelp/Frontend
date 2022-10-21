@@ -13,6 +13,8 @@ import { ProjectProfileComponent } from './components/project-profile/project-pr
 
 import { ContributionsComponent } from './components/contributions/contributions.component';
 import { LoginComponent } from './components/login/login.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 
 

@@ -1,7 +1,20 @@
 h1 {
     text-align: center;
     font-size: 35px;
-    margin-top: 80px;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cards img {
@@ -11,11 +24,12 @@ h1 {
 }
 
 .cards {
+    width: 80%;
+    height: 60%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 80px;
     text-align: center;
 }
 
@@ -32,8 +46,8 @@ h3 {
 }
 
 .card {
-    width: 245px;
-    height: 352px;
+    width: 20%;
+    height: 100%;
     border: #002b9a 3px solid;
     border-radius: 10px;
     margin-right: 20px;
