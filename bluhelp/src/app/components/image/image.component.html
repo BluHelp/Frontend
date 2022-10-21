@@ -1,0 +1,5 @@
+<form #ImageForm="ngForm">
+<label for="photo">Foto de Perfil</label>
+<input type="file" value="select" #selectFile (change)="onFileSelected($event)"  type="file" id="photo" name="photo" [(ngModel)]="user.photo"/> />
+<button (click)="imageUpload()">{{text.textButton}} aaa</button>
+</form>

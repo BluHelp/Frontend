@@ -7,11 +7,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { ProjectFormComponent } from './components/project-form/project-form.component';
-import { LoginComponent } from './components/login/login.component';
+
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { ProjectProfileComponent } from './components/project-profile/project-profile.component';
 
 import { ContributionsComponent } from './components/contributions/contributions.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 

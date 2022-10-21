@@ -2,6 +2,7 @@
   <h1>Contribuições</h1>
 
   <div class="contribuicoes">
+
     <div *ngFor="let contribution of contributionGet">
       <div class="colum-1">
         <div class="column-0">
@@ -14,7 +15,7 @@
         </div>
       </div>
       <div class="column-2">
-        <p class="row-1">{{contribution.date}}</p>
+        <p class="row-1">{{contribution.date | date: 'hh:mm'}} </p>
       </div>
     </div>
   </div>
@@ -22,7 +23,7 @@
 
 <div>
   <div class="text-area">
-    <textarea placeholder="Contribuir"></textarea>
+    <textarea placeholder="Contribuir" [(ngModel)]="contribution.content"></textarea>
 
     <button type="button" (click)="doRegister()">
       <img src="../../../assets/contribution-arrow.svg" alt="BluHelp" />
