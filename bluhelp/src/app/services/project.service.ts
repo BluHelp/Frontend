@@ -38,7 +38,7 @@ export class ProjectService {
     return this.client.get<Array<ProjectGet>>(this.endpoint + 'title/' + title);
   }
   getTop4Projects(): Observable<Array<ProjectGet>>{
-    return this.client.get<Array<ProjectGet>>(this.endpoint + '/default');
+    return this.client.get<Array<ProjectGet>>(this.endpoint + 'default');
   }
 
 

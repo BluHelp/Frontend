@@ -4,17 +4,13 @@
 
     <section>
         <div class="cards">
-            <div class="card">
-                <form>
-                    <a href="">
-                  
-                            class="img" alt="Foto do Projeto">
+            <div class="card" *ngFor="let project of projectget">                  
+                           
                         <div class="text-1">
-                            <h3><a href="">{{projectget.title}}</a></h3>
+                            <h3>{{project[0].title}}</h3>
                         </div>
-                        <p>{{projectget.avarageReview}}</p>
-                    </a>
-                </form>
+                     
+                 
             </div>
         </div>
 
