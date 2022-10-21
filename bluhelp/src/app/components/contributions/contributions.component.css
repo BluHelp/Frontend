@@ -6,13 +6,11 @@ h1{
     margin-bottom: 30px;
 }
 .contribuicoes{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    grid-template-columns: auto auto;
-    grid-template-areas: 
-    "row-1 row-1"
-    "row-2 row-2";
-    grid-gap: 400px;
+
+    align-items: center;
 }
 .row-1{
     grid-area: "row-1";
