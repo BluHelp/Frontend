@@ -13,7 +13,7 @@
             <p class="titulo">E-mail:</p>
 
             <div class="info-perfil">
-                <img src="./img/Arroba.png" alt="">
+                <img src="../../../assets/email.svg" alt="">
                 <p>{{userget.email}}</p>
             </div>
 
@@ -21,14 +21,14 @@
 
 
             <div class="info-perfil">
-                <img src="./img/Telepone.png" alt="">
+                <img src="../../../assets/Phone.svg" alt="">
                 <p>{{userget.phone}}</p>
             </div>
 
             <p class="titulo">CPF:</p>
 
             <div class="info-perfil">
-                <img src="./img/CPF.png" alt="">
+                <img src="../../../assets/CPF (1).svg" alt="">
                 <p>{{userget.cpf}}</p>
             </div>
 
@@ -40,9 +40,9 @@
 
         <ul class="tab-container">
             <li (click)="onTabClick('Projetos Criados')" [class.active]="ActiveTab == 'Projetos Criados'"
-                class="tab-link">Projetos Criados</li>
+                class="tab-link">Meus Projetos</li>
             <li (click)="onTabClick('Projetos Colaborados')" [class.active]="ActiveTab == 'Projetos Colaborados'"
-                class="tab-link">Projetos Colaborados</li>
+                class="tab-link">Minhas Colaborações</li>
         </ul>
 
 
@@ -52,24 +52,20 @@
             <div *ngIf="ActiveTab == 'Projetos Criados' " class="TabCriados">
                 <div class="column-1">
                     <div class="card1">
-
-
                         <img src= {{projectget.photo}} alt="" id="project-img">
                         <p class="title">{{projectget.title}}</p>
                         <div class="more">
                             <p>{{projectget.avarageReview}}</p>
                             <img src="./img/Vector (73).svg" alt="">
                         </div>
-                    </div>
+                    </div>  
                 </div>
             </div>
 
             <div *ngIf="ActiveTab == 'Projetos Colaborados' " class="TabColaborados">
                 <div class="coluna-2">
                     <div class="card1">
-
-
-                        <img src= {{projectget.photo}} alt="" id="project-img">
+                        <img src= {{projectget.photo}} alt="" id="project-iFmg">
                         <p class="title">{{projectget.title}}</p>
                         <div class="more">
                             <p>{{projectget.avarageReview}}</p>
@@ -77,7 +73,7 @@
                         </div>
                     </div>
                 </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>

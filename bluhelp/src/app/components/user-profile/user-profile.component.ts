@@ -39,5 +39,11 @@ ActiveTab:string = 'Projetos Criados'
   constructor(private route: ActivatedRoute, private userService: UserService) { }
 
   ngOnInit(): void {
+    this.getUserGet()
+  }
+  getUserGet(){
+    this.userService.getUser().subscribe(data =>{
+      this.userget = data;
+    }) 
   }
 }
