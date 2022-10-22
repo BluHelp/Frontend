@@ -21,7 +21,6 @@
         </div>
     </div>
 
-
     <div class="d2">
         <div class="l2">
             <div>
@@ -148,7 +147,7 @@
     <button type="submit" class="next1" *ngIf="steps == 1" (click)="steps = steps + 1">Avançar</button>
 </div>
 <div class="botao">
-    <a [routerLink]="['/ProjectProfile']"><button type="button" class="register" *ngIf="steps == 3" (click)="doRegister()">Cadastrar</button></a>
+    <button type="button" class="register" *ngIf="steps == 3" (click)="doRegister()">Cadastrar</button>
 </div>
 </div>
 

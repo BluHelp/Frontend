@@ -20,6 +20,7 @@ import { ModalInformationComponent } from './components/modal-information/modal-
 import { ModalPhotoComponent } from './components/modal-photo/modal-photo.component';
 import { ImageComponent } from './components/image/image.component';
 import { CommonModule } from '@angular/common';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { CommonModule } from '@angular/common';
     ContributionsComponent,
     ModalInformationComponent,
     ModalPhotoComponent,
-    ImageComponent
+    ImageComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

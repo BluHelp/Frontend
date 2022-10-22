@@ -11,6 +11,12 @@ import { ProjectView } from '../models/project-view';
 })
 export class ProjectService {
 
+
+  public getProjectID(): any {
+    return localStorage.getItem('project')
+  }
+
+  
   private endpoint = 'http://localhost:8080/project/'
 
   constructor(private client: HttpClient) { }

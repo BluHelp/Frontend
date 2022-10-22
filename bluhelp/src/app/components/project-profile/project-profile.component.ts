@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ProjectView } from 'src/app/models/project-view';
 import { ProjectService } from 'src/app/services/project.service';
  
@@ -10,7 +11,7 @@ import { ProjectService } from 'src/app/services/project.service';
  
 export class ProjectProfileComponent implements OnInit {
  
-projectview : ProjectView = {
+projectView : ProjectView = {
   id: 0, 
   creator: 0, 
   creatorName:"", 
@@ -27,8 +28,17 @@ projectview : ProjectView = {
   avarageReview:0,
 }
  
-  constructor( private service : ProjectService) { }
+  constructor( private service : ProjectService, private activatedRoute: ActivatedRoute) { }
  
   ngOnInit(): void {
+    this.getProject()
   }
+  getProject(): void{
+    
+    this.service.getProject(this.activatedRoute.snapshot.params['id']).subscribe((data: ProjectView) => {
+      this.projectView = data;
+    })
+  }
+
+  
 }
