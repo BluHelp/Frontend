@@ -1,154 +1,88 @@
-<form (ngSubmit)="submit()" #projectForm="ngForm">
- {{ project | json }}
- <div *ngIf="steps == 1">
- <div class="passo2">
-    <p>Passo 2 - Informações do Projeto</p>
-</div>
-<div id="circles">
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-</div>
+<body>
+    <section>
 
-<div class="form-box">
-    <div class="d1">
-        <div class="l1">
-            <div>
-            <label for="title">Título</label>
-        </div>
-            <input type="text" id="title" name="title" [(ngModel)]="project.title"/>
-        </div>
-    </div>
-
-
-    <div class="d2">
-        <div class="l2">
-            <div>
-                <label for="categories">Categoria</label>
+        <form>
+            <div class="titulos">
+                <h1 class="title" [ngStyle]="{'opacity': (currentTab == 0 ? '100%' : '0%')}">Criar Projeto</h1>
+                <h2 class="subtittle" *ngIf="currentTab == 0">Passo 1 - Adicionar Foto</h2>
+                <h2 class="subtittle" *ngIf="currentTab == 1">Passo 2 - Informações do Projeto</h2>
+                <h2 class="subtittle" *ngIf="currentTab == 2">Passo 3 - Descrções e Objetivo do Projeto</h2>
+                <h2 class="subtittle" *ngIf="currentTab == 3">Passo 4 - Endereço do Projeto</h2>
             </div>
-            <select name="categories">
-                <option value="" disabled selected hidden></option>
-                <option value="category.id" name="category.name">Categoria1</option>
-                <option value="category.id" name="category.name">Categoria2</option>
-                <option value="category.id" name="category.name">Categoria3</option>
-                <option value="category.id" name="category.name">Categoria4</option>
+
+            <div class="steps">
+                <span class="step" [ngStyle]="{'background-color': (currentTab == 0 ? '#002b9a' : '#ffffff')}"></span>
+                <span class="step" [ngStyle]="{'background-color': (currentTab == 1 ? '#002b9a' : '#ffffff')}"></span>
+                <span class="step" [ngStyle]="{'background-color': (currentTab == 2 ? '#002b9a' : '#ffffff')}"></span>
+                <span class="step" [ngStyle]="{'background-color': (currentTab == 3 ? '#002b9a' : '#ffffff')}"></span>
+            </div>
+
+            <div class="tab" *ngIf="currentTab == 0">
+
+                <label class="label" for="image" id="image">Foto do Projeto</label>
+                <input type="file" value="select" class="image" id="image" name="image" />
+            </div>
+
+            <div class="tab" *ngIf="currentTab == 1">
+                <label class="label-text" for="title">Titulo</label>
+                <input class="ttle" type="title" id="title" name="title" [(ngModel)]="project.title"  required/>
+
+                <select class="category" name="category" id="category" [(ngModel)]="project.category">
+                <option disabled="disabled" value="Categorias">Categorias</option>
+                <option value="1" name="category.name">Categoria 1</option>
+                <option value="2" name="category.name">Categoria 2</option>
+                <option value="3" name="category.name">Categoria 3</option>
+                <option value="4" name="category.name">Categoria 4</option>
+
             </select>
-        </div>
-    </div>
-</div>
-</div>
-<div *ngIf="steps == 2">
-<div class="passo3">
-    <p>Passo 3 - Descrição e objetivo do Projeto</p>
-</div>
-<div id="circles">
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-</div>
-
-
-<div class="form-box">
-    <div class="d1">
-        <div class="l1">
-            <div>
-            <label for="description">Descrição</label>
-        </div>
-            <input type="text" id="description" name="description" [(ngModel)]="project.description" />
-        </div>
-    </div>
-
-    <div class="d2">
-        <div class="l2">
-            <div>
-            <label for="objective">Objetivo</label>
-        </div>
-            <input type="text" id="objective" name="objective" [(ngModel)]="project.objective"/>
-        </div>
-    </div>
-</div>
-</div>
-
-<div *ngIf="steps == 3">
-
-    <div class="passo4">
-        <p>Passo 4 - Endereço do Projeto</p>
-    </div>
-    <div id="circles">
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-    </div>
-
-
-    <div class="form-box1">
-        <div class="d11">
-            <div class="l11">
-                <div>
-                    <label for="cep">CEP</label>
-                </div>
-                <input type="text" id="cep" name="cep" [(ngModel)]="project.cep"/>
             </div>
-        </div>
+            <div class="tab" *ngIf="currentTab == 2">
+                <label class="label-text">Descrição </label>
+                <textarea name="description" id="description" cols="10" rows="30" [(ngModel)]="project.description" ></textarea>
 
-
-        <div class="d22">
-            <div class="l22">
-                <div>
-                    <label for="street">Logradouro</label>
-                </div>
-                <input type="text" id="street" name="street" [(ngModel)]="project.street" />
+                <label class="label-text">Objetivo </label>
+                <input type="text" id="password" name="objective" [(ngModel)]="project.objective" required >
             </div>
-        </div>
 
-        <div class="d33">
-            <div class="l33">
+            <div class="tab" *ngIf="currentTab == 3">
+            <div class="forms">
                 <div>
-                    <label for="number">Número</label>
+                    <label class="label-text">CEP</label>
+                    <input class="info" type="text" required id="cep" name="cep" [(ngModel)]="project.cep"/> 
                 </div>
-                <input type="text" id="number" name="number" [(ngModel)]="project.number"/>
-            </div>
-        </div>
-    </div>
-
-    <div class="form-box2">
-        <div class="d44">
-            <div class="l44">
                 <div>
-                    <label for="district">Bairro</label>
+                    <label class="label-text">Bairro</label>
+                    <input class="info" type="text" name="district" [(ngModel)]="project.district" />
                 </div>
-                <input type="text" id="district" name="district" [(ngModel)]="project.district" />
-            </div>
-        </div>
-
-
-        <div class="d66">
-            <div class="l66">
-                <div>
-                    <label for="reference">Complemento</label>
                 </div>
-                <input type="text" id="reference" name="reference" [(ngModel)]="project.reference"/>
-            </div>
-        </div>
-    </div>
+                <div class="forms">
+                    <div>
+                        <label class="label-text">Logradouro</label>
+                        <input class="info" type="text" required id="place" name="place"[(ngModel)]="project.street" /> 
+                    </div>
+                    <div>
+                        <label class="label-text">Tipo via</label>
+                        <input class="info" type="text" name="type"  />
+                    </div>
+                    </div>
+                    <div class="forms">
+                    <div>
+                        <label class="label-text">Número</label>
+                        <input class="info" type="text" required id="district" name="district" [(ngModel)]="project.number"/> 
+                    </div>
+                    <div>
+                        <label class="label-text">Complemento</label>
+                        <input class="info" type="text" name="reference" [(ngModel)]="project.reference"/>
+                    </div>
+                    </div>
+                </div>
 
-</div>
-</form>
-<div class="buttons">
-<div class="backbtn">
-    <button type="button" class="back" *ngIf="steps != 1" (click)="steps = steps - 1">Voltar</button>
-</div>
-<div class="nextbtn">
-    <button type="submit" class="next" *ngIf="steps == 2" (click)="steps = steps + 1">Avançar</button>
-</div>
-<div class="nextbtn">
-    <button type="submit" class="next1" *ngIf="steps == 1" (click)="steps = steps + 1">Avançar</button>
-</div>
-<div class="botao">
-    <a [routerLink]="['/ProjectProfile']"><button type="button" class="register" *ngIf="steps == 3" (click)="doRegister()">Cadastrar</button></a>
-</div>
-</div>
+            <div class="buttons">
+                <button class="button-class" (click)="alterStep(-1)" *ngIf="currentTab != 0 && currentTab <=3 ">&lt; Voltar</button>
+                <button class="button-class" (click)="alterStep(1)" *ngIf="currentTab != 3" >Avançar &gt;</button>
+                <button class="button-class" (click)="doRegister()" *ngIf="currentTab == 3" [routerLink]="['project-profile/']">Criar Projeto</button>
+            </div>
+        </form>
+    </section>
+</body>
 

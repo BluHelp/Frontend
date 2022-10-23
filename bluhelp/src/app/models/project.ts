@@ -1,10 +1,9 @@
 export interface Project {
-    id: number;
     creator: number;
     title: string;
     objective: string;
     description: string;
-    categories: Array<number>;
+    category: number;
     photo: string;
     street: string;
     number: number;

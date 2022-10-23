@@ -10,7 +10,7 @@ export interface ProjectView {
     address: number;
     district: string;
     description: string;
-    categories: Array<Category>,
+    category: Category,
     progress: number;
     photo: string;
     date: string;

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Project } from 'src/app/models/project';
+import { ProjectView } from 'src/app/models/project-view';
 import { ProjectService } from 'src/app/services/project.service';
 import { UserService } from 'src/app/services/user.service';
+import { ProjectProfileComponent } from '../project-profile/project-profile.component';
 
 
 @Component({
@@ -12,18 +14,14 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class ProjectFormComponent implements OnInit {
 
-  
-
-  steps: any = 1;
 
   project: Project = {
-    id: 0,
     creator: JSON.parse(this.userService.getUser()).id,
     title: "",
     objective: "",
     description: "",
     photo: "",
-    categories: [],
+    category: 0,
     street: "",
     number: 0,
     district: "",
@@ -31,19 +29,31 @@ export class ProjectFormComponent implements OnInit {
     reference: ""
    } 
    
-
-  constructor(private service: ProjectService, private userService: UserService, private activatedRoute: ActivatedRoute) { }
+  constructor(private service: ProjectService, 
+    private userService: UserService, 
+    private router: Router, 
+    private activatedRoute: ActivatedRoute, ) { }
 
 
   ngOnInit(): void {
     
   }
-  submit(){
-    this.steps += 1;
-  }
+  currentTab: number = 0;
+   
+    alterStep(n: number) {
+      if (this.currentTab >= 0 && this.currentTab <= 3) {
+        this.currentTab = this.currentTab + n;
+      }
+    }
+  
 
   doRegister(): void{
-    this.service.addProject(this.project).subscribe(data => {this.project = data;})
+    this.service.addProject(this.project).subscribe(data => {
+      this.project = data;
+
+      this.router.navigate(['project-profile/' + data.id])      
+      });
   }
+  
 
 }

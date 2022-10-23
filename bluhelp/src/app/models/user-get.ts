@@ -6,7 +6,7 @@ export interface UserGet {
     surname: string;
     password: string;
     cpf: string;
-    photo: string;
+    photo: any;
     email: string;
     phone: string;
     projects: Array<ProjectGet>;

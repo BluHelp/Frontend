@@ -1,113 +1,64 @@
-<form (ngSubmit)="submit()" #userForm="ngForm">
+<body>
+    <section>
 
-    <div *ngIf="steps == 1">
-        <div class="Cadastro1">
-
-            <h1>Bem-Vindo!</h1>
-            <h2>Passo 1 - Informações Básicas</h2>
-            <div id="circles">
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-
-            </div>
-            <div class="row">
-                <div id="nome">
-                    <div class="form-box">
-                        <label for="name">Nome</label>
-                        <input type="text" id="name" name="name" size="10" required [(ngModel)]="user.name" />
-                    </div>
-                </div>
-                <div id="sobrenome">
-                    <div class="form-box">
-                        <label for="surname" id="surname">Sobrenome</label>
-                        <input type="text" name="surname" size="10" [(ngModel)]="user.surname" />
-                    </div>
-                </div>
+        <form>
+            <div class="titulos">
+                <h1 class="title" [ngStyle]="{'opacity': (currentTab == 0 ? '100%' : '0%')}">Bem-Vindo!</h1>
+                <h2 class="subtittle" *ngIf="currentTab == 0">Passo 1 - Informações Básicas</h2>
+                <h2 class="subtittle" *ngIf="currentTab == 1">Passo 2 - Contato</h2>
+                <h2 class="subtittle" *ngIf="currentTab == 2">Passo 3 - Senha</h2>
             </div>
 
-            <div id="cpf">
-                <div class="form-box">
-                    <label for="cpf">CPF</label>
-                    <input type="text" id="cpf" name="cpf" size="30" minlength="11" required [(ngModel)]="user.cpf" />
-                </div>
+            <div class="steps">
+                <span class="step" [ngStyle]="{'background-color': (currentTab == 0 ? '#002b9a' : '#ffffff')}"></span>
+                <span class="step" [ngStyle]="{'background-color': (currentTab == 1 ? '#002b9a' : '#ffffff')}"></span>
+                <span class="step" [ngStyle]="{'background-color': (currentTab == 2 ? '#002b9a' : '#ffffff')}"></span>
             </div>
 
+            <div class="tab" *ngIf="currentTab == 0">
+                <div class="name-surname">
+                <div>
+                    <label class="label-text" for="name" id="name">Nome</label>
+                    <input class="info" type="text" required id="name" name="name" maxlength="20" size="10" minlength="2" [(ngModel)]="user.name" /> 
+                </div>
+                <div>
+                    <label class="label-text" for="surname" id="surname">Sobrenome</label>
+                    <input class="info" type="text" name="surname" size="10" [(ngModel)]="user.surname" />
+                </div>
+                </div>
 
+                <label class="label-text" for="cpf" >CPF</label>
+                <input type="text" id="cpf" name="cpf" size="30" minlength="11" required [(ngModel)]="user.cpf" />
 
-        <div id="foto-perfil">
-            <div class="form-box">
-                <app-image></app-image> 
+                <label class="label" for="image" id="image">Foto de perfil</label>
+                <input type="file" value="select" #selectFile (change)="onFileSelected($event)" class="image" id="image" name="image" />
 
+            </div>
+
+            <div class="tab" *ngIf="currentTab == 1">
+                <label class="label-text" for="email">E-mail</label>
+                <input type="email" id="email" name="email" size="10" required [(ngModel)]="user.email"/>
+
+                <label class="label-text" for="phone" id="phone">Telefone</label>
+                <input type="tel" name="phone" size="10" [(ngModel)]="user.phone" />
+            </div>
+
+            <div class="tab" *ngIf="currentTab == 2">
+                <label class="label-text" for="senha">Senha</label>
+                <input type="password" id="password" name="password" size="10" required [(ngModel)]="user.password"/>
+
+                <label class="label-text" for="senha">Confirme a senha</label>
+                <input type="password" id="password" name="password" size="10" required >
+            </div>
+
+            <div class="buttons">
+                <button class="button-class" (click)="alterStep(-1)" *ngIf="currentTab != 0">&lt; Voltar</button>
+                <button class="button-class" (click)="alterStep(1)" *ngIf="currentTab != 2" >Avançar &gt;</button>
+                <button class="button-class" (click)="doRegister()" *ngIf="currentTab == 2">Cadastrar</button>
+            </div>
+        </form>
            
-            </div>
-        </div>
-    </div>
+        <p *ngIf="currentTab == 0" >Já tem conta? <a routerLink="">Faça o login</a></p>
+    </section>
+</body>
 
-
-    <div *ngIf="steps == 2">
-        <div class="Cadastro2">
-
-            <h2>Passo 2 - Contato</h2>
-            <div id="circles">
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-
-            </div>
-            <div id="email">
-                <div class="form-box">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" size="10" required [(ngModel)]="user.email" />
-                </div>
-            </div>
-            <div id="telefone">
-                <div class="form-box">
-                    <label for="phone" id="phone">Telefone</label>
-                    <input type="tel" name="phone" size="10" [(ngModel)]="user.phone" />
-                </div>
-            </div>
-        </div>
-
-        <div *ngIf="steps == 3">
-            <div class="Cadastro3">
-                <h2>Passo 3 - Senha</h2>
-                <div id="circles">
-                    <span class="step"></span>
-                    <span class="step"></span>
-                    <span class="step"></span>
-
-                </div>
-
-                <div id="senha">
-                    <div class="form-box">
-                        <label for="Senha">Senha</label>
-                        <input type="password" id="password" name="password" size="10" required [(ngModel)]="user.password" />
-                    </div>
-                </div>
-                <div id="confirmpass">
-                    <div class="form-box">
-                        <label for="Senha">Confirme a senha</label>
-                        <input type="password" id="password" name="password" size="10" required />
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-<div class="container-button">
-    <div class="botao">
-        <button type="submit" class="avançar" *ngIf="steps != 3" (click)="steps = steps + 1">Avançar </button>
-    </div>
-    <div class="botao">
-        <button type="button" class="avançar" *ngIf="steps == 3" (click)="doRegister()">Cadastrar</button>
-    </div>
-</div>
-<div class="container-voltar">
-    <div class="botao">
-        <button type="button" class="avançar" *ngIf="steps != 1" (click)="steps = steps - 1">Voltar</button>
-    </div>
-</div>
-<div class="login" *ngIf="steps == 1">
-    <p>Já possui cadastro? <a [routerLink]="['']">Fazer login</a></p>
-</div>

@@ -18,8 +18,8 @@ import { ModalOptionsComponent } from './components/modal-options/modal-options.
 import { ContributionsComponent } from './components/contributions/contributions.component';
 import { ModalInformationComponent } from './components/modal-information/modal-information.component';
 import { ModalPhotoComponent } from './components/modal-photo/modal-photo.component';
-import { ImageComponent } from './components/image/image.component';
 import { CommonModule } from '@angular/common';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -38,7 +38,7 @@ import { CommonModule } from '@angular/common';
     ContributionsComponent,
     ModalInformationComponent,
     ModalPhotoComponent,
-    ImageComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -4,10 +4,6 @@ h1 {
     margin-right: 20px;
 }
 
-h3 {
-    font-weight: 500;
-}
-
 a {
     text-decoration: none;
     color: black;
@@ -61,30 +57,20 @@ p {
     vertical-align: top;
 }
 
-.district-icon h3 {
-    display: inline-block;
-    margin-left: 5px;
-}
-
-.category-icon h3 {
-    display: inline-block;
-    margin-left: 5px;
-}
-
-.status-icon h3 {
-    display: inline-block;
-    margin-left: 5px;
-}
-
 .contribution-icon {
-    display: inline-block;
-    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 60%;
+    gap: 2%;
     border: 2px solid #002b9a;
     border-radius: 7px;
     padding: 10px;
 }
 
 .column-2 {
+    width: 130%;
+    height: 100%;
     margin-top: 20px;
 }
 
@@ -100,10 +86,7 @@ p {
 
 .row-3 {
     grid-area: "row-3";
-}
-
-.row-2 h3 {
-    margin-bottom: 30px;
+    margin-top: 5%;
 }
 
 .row-1 p {
@@ -137,6 +120,15 @@ p {
     border-radius: 50%;
     padding: 5px;
     margin-right: 10px;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+
+    width: 100%;
+    height: 60px;
 }
 
 .delete-icon {

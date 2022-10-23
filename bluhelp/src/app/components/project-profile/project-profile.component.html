@@ -4,7 +4,7 @@
             <img src="" class="foto-projeto" width="550px" height="220px" alt="">
         </div>
         <div class="row22">
-            <div class="objective-icon">
+            <div class="icon">
 
                 <img src="../../../assets/objective.svg" alt="">
                 <div class="objective-title">
@@ -13,10 +13,10 @@
             </div>
             <div class="objective-text">
                 <p>
-                    {{projectview.objective}}
+                    {{ projectView.objective }}
                 </p>
             </div>
-            <div class="description-icon">
+            <div class="icon">
                 <img src="../../../assets/pencil.svg" alt="">
 
                 <div class="description-title">
@@ -26,60 +26,56 @@
         </div>
         <div class="row33">
             <p>
-                {{projectview.description}}
+                {{ projectView.description }}
             </p>
         </div>
 
     </div>
     <div class="column-2">
         <div class="row-1">
-            <h1>
-                {{projectview.title}}
-            </h1>
-            <a routerLink="">
-                {{projectview.creatorName}}{{projectview.creatorSurname}}
+            <h1>{{projectView.title}}</h1>
+            <a>
+                {{projectView.creatorName}}{{projectView.creatorSurname}}
             </a>
+            <p>Criado em: {{ projectView.date | date: 'dd/MM/yyyy' }}</p>
             <p>
-                Criado em: {{projectview.date}}
-            </p>
-            <p>
-                {{projectview.avarageReview}}
+                {{projectView.avarageReview}}
             </p>
         </div>
 
         <div class="row-2">
-            <div class="district-icon">
+            <div class="icon">
                 <img src="../../../assets/district.svg" alt="">
-                <h3>Bairro</h3>
+                <h3>{{ projectView.district }}</h3>
             </div>
-            <div class="category-icon">
+            <div class="icon">
                 <img src="../../../assets/category.svg" alt="">
                 <h3>
-                    {{projectview.categories}}
+                    {{projectView.category.name}}
                 </h3>
             </div>
-            <div class="status-icon">
+            <div class="icon">
                 <img src="../../../assets/correct-status.svg" alt="">
                 <h3>
-                    {{projectview.progress}}
+                    {{projectView.progress}}
                 </h3>
             </div>
         </div>
         <div class="row-3">
             <p>Avalie do projeto:</p>
-            <div class="contribution-icon">
+            <div (click)="onContributions()" class="contribution-icon">
                 <img src="../../../assets/contribution-arrow.svg" alt="">
-                <a routerLink="">Contribuições</a>
+                <a>Contribuições</a>
             </div>
 
             <div class="edit-delete-icon">
                 <div class="edit-icon">
-                    <a routerLink="">
+                    <a href="#">
                         <img src="../../../assets/edit.svg " alt=" ">
                     </a>
                 </div>
-                <div class="delete-icon ">
-                    <a [routerLink]="['contributions'] ">
+                <div class="delete-icon">
+                    <a (click)="deleteProject()">
                         <img src="../../../assets/delete.svg " alt=" ">
                     </a>
                 </div>
