@@ -60,5 +60,7 @@ projectView : ProjectView = {
     this.router.navigate(['profile/' + this.projectView.id])
   }
 
-  
+  onContributions(){
+    this.router.navigate(['contributions/' + this.projectView.id])
+  }
 }

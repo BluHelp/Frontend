@@ -58,8 +58,11 @@ p {
 }
 
 .contribution-icon {
-    display: inline-block;
-    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 60%;
+    gap: 2%;
     border: 2px solid #002b9a;
     border-radius: 7px;
     padding: 10px;
@@ -83,6 +86,7 @@ p {
 
 .row-3 {
     grid-area: "row-3";
+    margin-top: 5%;
 }
 
 .row-1 p {
