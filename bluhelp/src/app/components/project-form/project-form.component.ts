@@ -19,39 +19,19 @@ export class ProjectFormComponent implements OnInit {
   steps: any = 1;
 
   project: Project = {
-    id: 0,
     creator: JSON.parse(this.userService.getUser()).id,
     title: "",
     objective: "",
     description: "",
     photo: "",
-    categories: [],
+    category: 0,
     street: "",
     number: 0,
     district: "",
     cep: "",
     reference: ""
    } 
-   projectView: ProjectView = {
-    id: JSON.parse(this.userService.getUser()).id,
-    creator: 0,
-    creatorName: "",
-    creatorSurname: "",
-    title: "",
-    objective: "",
-    address: 0,
-    district: "",
-    description: "",
-    categories: [],
-    progress: 0,
-    photo: "",
-    date: "",
-    avarageReview: 0
    
-
-   }
-   
-
   constructor(private service: ProjectService, 
     private userService: UserService, 
     private router: Router, 
@@ -68,12 +48,8 @@ export class ProjectFormComponent implements OnInit {
   doRegister(): void{
     this.service.addProject(this.project).subscribe(data => {
       this.project = data;
-      let authenticProject = {
-        id: data.id
-      } 
-    
-      this.router.navigate(['project-profile/' + data.id])
-      
+
+      this.router.navigate(['project-profile/' + data.id])      
       });
   }
   

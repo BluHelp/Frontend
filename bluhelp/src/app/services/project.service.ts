@@ -21,8 +21,8 @@ export class ProjectService {
 
   constructor(private client: HttpClient) { }
 
-  addProject(project: Project): Observable<Project>{
-		return this.client.post<Project>(this.endpoint, project);
+  addProject(project: Project): Observable<any>{
+		return this.client.post<any>(this.endpoint, project);
 	}
   
   getProject(id: number): Observable<ProjectView>{

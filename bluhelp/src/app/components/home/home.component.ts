@@ -18,6 +18,10 @@ export class HomeComponent implements OnInit {
   }
 
   getProjects(){
-    this.service.getTop4Projects().subscribe(data => this.projectget = data)
+    this.service.getTop4Projects().subscribe(data => {
+      this.projectget = data
+      console.log(this.projectget);
+      
+    })
   }
 }

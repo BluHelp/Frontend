@@ -35,15 +35,15 @@
 
 
 
-        <div id="foto-perfil">
-            <div class="form-box">
-                <app-image></app-image> 
+            <div id="foto-perfil">
+                <div class="form-box">
+                    <app-image></app-image>
 
-           
+
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
     <div *ngIf="steps == 2">
@@ -71,45 +71,46 @@
         </div>
     </div>
 
-        <div *ngIf="steps == 3">
-            <div class="Cadastro3">
-                <h2>Passo 3 - Senha</h2>
-                <div id="circles">
-                    <span class="step"></span>
-                    <span class="step"></span>
-                    <span class="step"></span>
-
-                </div>
-
-                <div id="senha">
-                    <div class="form-box">
-                        <label for="Senha">Senha</label>
-                        <input type="password" id="password" name="password" size="10" required [(ngModel)]="user.password" />
-                    </div>
-                </div>
-                <div id="confirmpass">
-                    <div class="form-box">
-                        <label for="Senha">Confirme a senha</label>
-                        <input type="password" id="password" name="password" size="10" required />
-                    </div>
-                </div>
+    <div *ngIf="steps == 3">
+        <div class="Cadastro3">
+            <h2>Passo 3 - Senha</h2>
+            <div id="circles">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
 
             </div>
+
+            <div id="senha">
+                <div class="form-box">
+                    <label for="Senha">Senha</label>
+                    <input type="password" id="password" name="password" size="10" required
+                        [(ngModel)]="user.password" />
+                </div>
+            </div>
+            <div id="confirmpass">
+                <div class="form-box">
+                    <label for="Senha">Confirme a senha</label>
+                    <input type="password" id="password" name="password" size="10" required />
+                </div>
+            </div>
+
         </div>
+    </div>
 
 </form>
 
-        <button type="button" class="avançar" *ngIf="steps != 3" (click)="steps = steps + 1">Avançar </button>
-  
-    <div class="botao">
-        <button type="button" class="avançar" *ngIf="steps == 3" (click)="doRegister()">Cadastrar</button>
-    </div>
+<div class="container-buttons">
+    <button type="button" class="avançar" *ngIf="steps != 3" (click)="steps = steps + 1">Avançar </button>
 
-<div class="container-voltar">
-    <div class="botao">
-        <button type="button" class="avançar" *ngIf="steps != 1" (click)="steps = steps - 1">Voltar</button>
+    <button type="button" class="avançar" *ngIf="steps == 3" (click)="doRegister()">Cadastrar</button>
+
+    <div class="container-voltar">
+        <div class="botao">
+            <button type="button" class="avançar" *ngIf="steps != 1" (click)="steps = steps - 1">Voltar</button>
+        </div>
     </div>
-</div>
-<div class="login" *ngIf="steps == 1">
-    <p>Já possui cadastro? <a [routerLink]="['']">Fazer login</a></p>
+    <div class="login" *ngIf="steps == 1">
+        <p>Já possui cadastro? <a [routerLink]="['']">Fazer login</a></p>
+    </div>
 </div>
