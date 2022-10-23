@@ -54,7 +54,7 @@
             <div class="buttons">
                 <button class="button-class" (click)="alterStep(-1)" *ngIf="currentTab != 0">&lt; Voltar</button>
                 <button class="button-class" (click)="alterStep(1)" *ngIf="currentTab != 2" >Avançar &gt;</button>
-                <button class="button-class" *ngIf="currentTab == 2">Cadastrar</button>
+                <button class="button-class" (click)="doRegister()" *ngIf="currentTab == 2">Cadastrar</button>
             </div>
         </form>
            
