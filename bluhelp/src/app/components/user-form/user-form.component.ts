@@ -17,7 +17,7 @@ export class UserFormComponent implements OnInit {
   typeObject: ""
   }
 
-  steps: any = 1;
+  currentTab:  number = 0;
   
   user: User = { name: "", surname: "", password: "", cpf: "", email: "", phone: ""}
   
@@ -32,9 +32,11 @@ export class UserFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submit(){
-    this.steps += 1;
-  }
+  alterStep(n: number) {
+      if (this.currentTab >= 0 && this.currentTab <= 2) {
+        this.currentTab = this.currentTab + n;
+      }
+    }
 
   doRegister(): void {
     this.service.addUser(this.user).subscribe(data => {
