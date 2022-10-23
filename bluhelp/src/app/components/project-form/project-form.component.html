@@ -71,7 +71,7 @@
                         <input class="info" type="text" required id="district" name="district" [(ngModel)]="project.number"/> 
                     </div>
                     <div>
-                        <label class="label-text">Coomplemento</label>
+                        <label class="label-text">Complemento</label>
                         <input class="info" type="text" name="reference" [(ngModel)]="project.reference"/>
                     </div>
                     </div>
@@ -80,7 +80,7 @@
             <div class="buttons">
                 <button class="button-class" (click)="alterStep(-1)" *ngIf="currentTab != 0 && currentTab <=3 ">&lt; Voltar</button>
                 <button class="button-class" (click)="alterStep(1)" *ngIf="currentTab != 3" >Avançar &gt;</button>
-                <button class="button-class" (click)="doRegister()" *ngIf="currentTab == 3">Criar Projeto</button>
+                <button class="button-class" (click)="doRegister()" *ngIf="currentTab == 3" [routerLink]="['project-profile/']">Criar Projeto</button>
             </div>
         </form>
     </section>

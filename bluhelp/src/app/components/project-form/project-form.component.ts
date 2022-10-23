@@ -14,9 +14,6 @@ import { ProjectProfileComponent } from '../project-profile/project-profile.comp
 })
 export class ProjectFormComponent implements OnInit {
 
-  
-
-  steps: any = 1;
 
   project: Project = {
     creator: JSON.parse(this.userService.getUser()).id,
