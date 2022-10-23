@@ -41,9 +41,14 @@ export class ProjectFormComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  submit(){
-    this.steps += 1;
-  }
+  currentTab: number = 0;
+   
+    alterStep(n: number) {
+      if (this.currentTab >= 0 && this.currentTab <= 2) {
+        this.currentTab = this.currentTab + n;
+      }
+    }
+  
 
   doRegister(): void{
     this.service.addProject(this.project).subscribe(data => {
