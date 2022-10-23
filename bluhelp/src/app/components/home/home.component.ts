@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ProjectGet } from 'src/app/models/project-get';
 import { ProjectService } from 'src/app/services/project.service';
@@ -11,10 +12,17 @@ export class HomeComponent implements OnInit {
   
   projectget: Array<ProjectGet> = new Array();
 
-  constructor(private service: ProjectService) {}
+  constructor(
+    private service: ProjectService,
+    private router: Router  
+  ) {}
 
   ngOnInit(): void {
     this.getProjects()
+  }
+
+  openProject(id: number){
+    this.router.navigate(['project-profile/' + id])
   }
 
   getProjects(){

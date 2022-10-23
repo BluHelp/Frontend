@@ -1,5 +1,7 @@
+import { UserService } from './../../services/user.service';
+import { Category } from './../../models/category';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProjectView } from 'src/app/models/project-view';
 import { ProjectService } from 'src/app/services/project.service';
  
@@ -21,23 +23,41 @@ projectView : ProjectView = {
   address:0, 
   district:"", 
   description:"", 
-  categories:[],
+  category: {
+    id: 0,
+    name: ""
+  },
   progress: 0,
-  photo:"", 
-  date:"",
-  avarageReview:0,
+  photo: "", 
+  date: "",
+  avarageReview: 0,
 }
  
-  constructor( private service : ProjectService, private activatedRoute: ActivatedRoute) { }
+  constructor( 
+    private service: ProjectService,
+    private userService: UserService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router  
+  ) { }
  
   ngOnInit(): void {
     this.getProject()
   }
-  getProject(): void{
-    
+
+  getProject(){  
     this.service.getProject(this.activatedRoute.snapshot.params['id']).subscribe((data: ProjectView) => {
       this.projectView = data;
+      console.log(this.projectView)
     })
+  }
+
+  deleteProject(){
+    this.service.deleteProject(this.activatedRoute.snapshot.params['id']).subscribe(() => {})
+    this.router.navigate(['project-profile/' + this.projectView.id])
+  }
+
+  openPerfilUser(){
+    this.router.navigate(['profile/' + this.projectView.id])
   }
 
   
