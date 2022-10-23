@@ -37,9 +37,8 @@
 
             <div id="foto-perfil">
                 <div class="form-box">
-                    <app-image></app-image>
-
-
+                    <label class="label" for="image" id="image">Adicionar Imagem</label>
+                    <input type="file" value="select" #selectFile (change)="onFileSelected($event)" class="image" id="image" name="image" />
                 </div>
             </div>
         </div>
