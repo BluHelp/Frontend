@@ -4,7 +4,7 @@
             <img src="" class="foto-projeto" width="550px" height="220px" alt="">
         </div>
         <div class="row22">
-            <div class="objective-icon">
+            <div class="icon">
 
                 <img src="../../../assets/objective.svg" alt="">
                 <div class="objective-title">
@@ -16,7 +16,7 @@
                     {{ projectView.objective }}
                 </p>
             </div>
-            <div class="description-icon">
+            <div class="icon">
                 <img src="../../../assets/pencil.svg" alt="">
 
                 <div class="description-title">
@@ -34,7 +34,7 @@
     <div class="column-2">
         <div class="row-1">
             <h1>{{projectView.title}}</h1>
-            <a href="#" (click)="openPerfilUser()">
+            <a>
                 {{projectView.creatorName}}{{projectView.creatorSurname}}
             </a>
             <p>Criado em: {{ projectView.date | date: 'dd/MM/yyyy' }}</p>
