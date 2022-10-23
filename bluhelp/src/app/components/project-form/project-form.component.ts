@@ -44,7 +44,7 @@ export class ProjectFormComponent implements OnInit {
   currentTab: number = 0;
    
     alterStep(n: number) {
-      if (this.currentTab >= 0 && this.currentTab <= 2) {
+      if (this.currentTab >= 0 && this.currentTab <= 3) {
         this.currentTab = this.currentTab + n;
       }
     }
