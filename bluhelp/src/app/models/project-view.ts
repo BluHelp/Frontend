@@ -12,7 +12,7 @@ export interface ProjectView {
     description: string;
     category: Category,
     progress: number;
-    photo: string;
+    photo: any;
     date: string;
     avarageReview: number;
 }

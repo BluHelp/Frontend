@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProjectView } from 'src/app/models/project-view';
 import { ProjectService } from 'src/app/services/project.service';
+import { ImageService } from 'src/app/services/image.service';
  
 @Component({
   selector: 'app-project-profile',
@@ -28,25 +29,37 @@ projectView : ProjectView = {
     name: ""
   },
   progress: 0,
-  photo: "", 
+  photo: null, 
   date: "",
   avarageReview: 0,
 }
  
+  imageProject: any
+
   constructor( 
     private service: ProjectService,
     private userService: UserService,
+    private imageService: ImageService,
     private activatedRoute: ActivatedRoute,
     private router: Router  
   ) { }
  
   ngOnInit(): void {
-    this.getProject()
+    this.getProject();
+  }
+
+  getImage(id: number) {
+    this.imageService.getProjectImage(id).subscribe((res: any) => {
+      let retrieveResonse = res;
+      let base64Data = retrieveResonse.photo;
+      this.imageProject = 'data:image/jpeg;base64,' + base64Data;
+    })
   }
 
   getProject(){  
     this.service.getProject(this.activatedRoute.snapshot.params['id']).subscribe((data: ProjectView) => {
       this.projectView = data;
+      this.getImage(this.projectView.id);
       console.log(this.projectView)
     })
   }

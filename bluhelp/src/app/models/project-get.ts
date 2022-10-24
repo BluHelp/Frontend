@@ -1,7 +1,7 @@
 export interface ProjectGet {
     id: number;
     title: string;
-    photo: string;
+    photo: any;
     avarageReview: number;
     progress: number;
 }
