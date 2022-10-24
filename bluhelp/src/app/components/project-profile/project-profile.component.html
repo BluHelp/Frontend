@@ -4,7 +4,8 @@
             <img src="" class="foto-projeto" width="550px" height="220px" alt="">
         </div>
         <div class="row22">
-            <div class="icon">
+            <div class="gap">
+            <div class="icone">
 
                 <img src="../../../assets/objective.svg" alt="">
                 <div class="objective-title">
@@ -16,19 +17,23 @@
                     {{ projectView.objective }}
                 </p>
             </div>
-            <div class="icon">
+        </div>
+        <div class="gap">
+            <div class="icone">
                 <img src="../../../assets/pencil.svg" alt="">
 
                 <div class="description-title">
                     <h3>Descrição</h3>
                 </div>
             </div>
-        </div>
+       
         <div class="row33">
             <p>
                 {{ projectView.description }}
             </p>
         </div>
+    </div>
+</div>
 
     </div>
     <div class="column-2">
@@ -62,18 +67,14 @@
             </div>
         </div>
         <div class="row-3">
-            <p>Avalie do projeto:</p>
+            
             <div (click)="onContributions()" class="contribution-icon">
-                <img src="../../../assets/contribution-arrow.svg" alt="">
+                <img src="../../../assets/contribution-button.svg" alt="">
                 <a>Contribuições</a>
             </div>
 
             <div class="edit-delete-icon">
-                <div class="edit-icon">
-                    <a href="#">
-                        <img src="../../../assets/edit.svg " alt=" ">
-                    </a>
-                </div>
+               
                 <div class="delete-icon">
                     <a (click)="deleteProject()">
                         <img src="../../../assets/delete.svg " alt=" ">
