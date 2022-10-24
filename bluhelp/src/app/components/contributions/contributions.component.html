@@ -5,9 +5,12 @@
     <div class="contribuicoes">
 
       <div *ngFor="let contribution of contributionGet">
+        <span class="row">
         <a>{{ contribution.user.name }}</a>
+       
+        <p class="row-1">{{contribution.date | date: 'dd/MM/yyyy'}} </p>
+        </span>
         <p class="row-2">{{ contribution.content }}</p>
-        <p class="row-1">{{contribution.date | date: 'hh:mm'}} </p>
       </div>
     </div>
 
