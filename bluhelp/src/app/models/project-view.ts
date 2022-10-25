@@ -14,5 +14,5 @@ export interface ProjectView {
     progress: number;
     photo: any;
     date: string;
-    avarageReview: number;
+    averageReview: number;
 }

@@ -3,10 +3,10 @@
     
     <div class="coluna-1">
         
-        <img [src]="imageUser" width="100" height="100" id="fotoPerfil">
+        <img [src]="imageUser" width="100" height="100" id="fotoPerfil" alt=" ">
 
 
-        <h2><span>{{userget.name}}</span></h2>
+        <h2><span>{{ userGet.name }} {{ userGet.surname }}</span></h2>
 
 
         <div class="usuarioPerfil">
@@ -14,7 +14,7 @@
 
             <div class="info-perfil">
                 <img src="../../../assets/email.svg" alt="">
-                <p>{{userget.email}}</p>
+                <p>{{ userGet.email }}</p>
             </div>
 
             <p class="titulo">Telefone:</p>
@@ -22,14 +22,14 @@
 
             <div class="info-perfil">
                 <img src="../../../assets/Phone.svg" alt="">
-                <p>{{userget.phone}}</p>
+                <p>{{ userGet.phone }}</p>
             </div>
 
             <p class="titulo">CPF:</p>
 
             <div class="info-perfil">
                 <img src="../../../assets/CPF (1).svg" alt="">
-                <p>{{userget.cpf}}</p>
+                <p>{{ userGet.cpf }}</p>
             </div>
 
 
@@ -51,12 +51,12 @@
 
             <div *ngIf="ActiveTab == 'Projetos Criados' " class="TabCriados">
                 <div class="column-1">
-                    <div class="card1">
-                        <img src= {{projectget.photo}} alt="" id="project-img">
-                        <p class="title">{{projectget.title}}</p>
+                    <div class="card1" (click)="openProject(project.id)" *ngFor="let project of userGet.createdProjects">
+                        <img [src]= imageProject alt="" id="project-img">
+                        <p class="title">{{project.title}}</p>
                         <div class="more">
-                            <p>{{projectget.avarageReview}}</p>
-                            <img src="./img/Vector (73).svg" alt="">
+                            <p>{{project.averageReview}}</p>
+                            
                         </div>
                     </div>  
                 </div>
@@ -64,12 +64,12 @@
 
             <div *ngIf="ActiveTab == 'Projetos Colaborados' " class="TabColaborados">
                 <div class="coluna-2">
-                    <div class="card1">
-                        <img src= {{projectget.photo}} alt="" id="project-iFmg">
-                        <p class="title">{{projectget.title}}</p>
+                    <div class="card1" (click)="openProject(project.id)" *ngFor="let project of userGet.contributedProjects">
+                        <img [src]= imageProject alt="" id="project-iFmg">
+                        <p class="title">{{project.title}}</p>
                         <div class="more">
-                            <p>{{projectget.avarageReview}}</p>
-                            <img src="./img/Vector (73).svg" alt="">
+                            <p>{{project.averageReview}}</p>
+                            
                         </div>
                     </div>
                 </div>

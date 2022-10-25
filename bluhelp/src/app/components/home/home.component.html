@@ -7,10 +7,10 @@
             <div class="card" (click)="openProject(project.id)" *ngFor="let project of projectget">
 
                 <div class="cards-img">
-                    {{project.photo}}
+                    <img [src]= imageProject alt="" id="project-img">
                 </div>
             <div>
-                <h3>{{project.title}}</h3>
+                <p class="title">{{project.title}}</p>
             </div>
            
             <div>

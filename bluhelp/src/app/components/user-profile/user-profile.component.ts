@@ -1,9 +1,10 @@
 import { ImageService } from './../../services/image.service';
 import { UserService } from './../../services/user.service';
+import { ProjectService } from 'src/app/services/project.service';
 import { ProjectGet } from './../../models/project-get';
 import { UserGet } from './../../models/user-get';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-profile',
@@ -12,7 +13,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UserProfileComponent implements OnInit {
 
-  userget : UserGet = {
+  userGet : UserGet = {
     id : 0,
     name : "",
     surname : "",
@@ -21,18 +22,20 @@ export class UserProfileComponent implements OnInit {
     photo : null,
     email : "",
     phone : "",
-    projects : []
+    createdProjects : new Array<ProjectGet>,
+    contributedProjects : new Array<ProjectGet>
   }
 
-  projectget : ProjectGet = {
+  projects : ProjectGet = {
     id : 0,
     title : "",
-    photo : "",
-    avarageReview : 0,
+    photo : null,
+    averageReview : 0,
     progress : 0
   }
 
   imageUser: any
+  imageProject: any
 
   ActiveTab:string = 'Projetos Criados'
 
@@ -42,18 +45,31 @@ export class UserProfileComponent implements OnInit {
  
   constructor(private route: ActivatedRoute, 
               private userService: UserService,
-              private imageService: ImageService) { }
+              private imageService: ImageService,
+              private router: Router,
+              private projectService: ProjectService) { }
 
   ngOnInit(): void {
-    this.getImage(JSON.parse(this.userService.getUser()).id)
+    this.getUserGet();
+    this.getImage(JSON.parse(this.userService.getUser()).id);
   }
 
   getUserGet(){
-    this.userService.getUser().subscribe(data =>{
-      this.userget = data;
-    }) 
+    this.userService.getUserWithProjects(JSON.parse(this.userService.getUser()).id).subscribe(
+      (data: UserGet) =>
+      {this.userGet = data;
+      this.userGet.createdProjects.forEach(project => {
+        this.getProjectImage(project.id);
+      });
+      this.userGet.contributedProjects.forEach(project => {
+        this.getProjectImage(project.id);
+      });
+      console.log(this.userGet)})
   }
 
+  openProject(id: number){
+    this.router.navigate(['project-profile/' + id])
+  }
 
   // < METODO PARA PEGAR A IMAGEM >
   // 
@@ -69,6 +85,13 @@ export class UserProfileComponent implements OnInit {
       let base64Data = retrieveResonse.photo;
       this.imageUser = 'data:image/jpeg;base64,' + base64Data;
     })
-    
+  }
+
+  getProjectImage(id: number) {
+    this.imageService.getProjectImage(id).subscribe((res: any) => {
+      let retrieveResonse = res;
+      let base64Data = retrieveResonse.photo;
+      this.imageProject = 'data:image/jpeg;base64,' + base64Data;
+    })
   }
 }

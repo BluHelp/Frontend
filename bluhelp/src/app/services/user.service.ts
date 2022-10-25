@@ -2,7 +2,7 @@ import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../models/user';
-import { ProjectGet } from '../models/project-get';
+import { UserGet } from '../models/user-get';
 
 @Injectable({
   providedIn: 'root'
@@ -34,8 +34,8 @@ export class UserService {
   deleteUser(user: User, id: number): Observable<string> {
     return this.client.delete<string>(this.endpoint + id);
   }
-  getUserWithProjects(id: number): Observable<ProjectGet> {
-    return this.client.get<ProjectGet>(this.endpoint + id);
+  getUserWithProjects(id: number): Observable<UserGet> {
+    return this.client.get<UserGet>(this.endpoint + id);
   }
 
 

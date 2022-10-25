@@ -14,9 +14,11 @@ export class ImageService {
   postImage(typePost: string, id: number, postData: any): Observable<any>{
     return this.http.post('http://localhost:8080/'+ typePost + '/image/' + id, postData);
   }
+  
   getUserImage(iduser: number): Observable<any>{
     return this.http.get<any>('http://localhost:8080/user/getImage/'+ iduser);
   }
+
   getProjectImage(idproject: number): Observable<any>{
     return this.http.get<any>('http://localhost:8080/project/getImage/'+ idproject);
   }

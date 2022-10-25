@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ProjectGet } from 'src/app/models/project-get';
 import { ProjectService } from 'src/app/services/project.service';
+import { ImageService } from './../../services/image.service';
 
 @Component({
   selector: 'app-home',
@@ -14,9 +15,12 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private service: ProjectService,
-    private router: Router  
+    private router: Router,  
+    private imageService: ImageService
   ) {}
 
+  imageProject: any
+  
   ngOnInit(): void {
     this.getProjects()
   }
@@ -28,8 +32,18 @@ export class HomeComponent implements OnInit {
   getProjects(){
     this.service.getTop4Projects().subscribe(data => {
       this.projectget = data
+      this.projectget.forEach(project => {
+        this.getProjectImage(project.id);
+      });
       console.log(this.projectget);
-      
+    })
+  }
+
+  getProjectImage(id: number) {
+    this.imageService.getProjectImage(id).subscribe((res: any) => {
+      let retrieveResonse = res;
+      let base64Data = retrieveResonse.photo;
+      this.imageProject = 'data:image/jpeg;base64,' + base64Data;
     })
   }
 }

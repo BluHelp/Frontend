@@ -31,7 +31,7 @@ projectView : ProjectView = {
   progress: 0,
   photo: null, 
   date: "",
-  avarageReview: 0,
+  averageReview: 0,
 }
  
   imageProject: any
@@ -41,7 +41,7 @@ projectView : ProjectView = {
     private userService: UserService,
     private imageService: ImageService,
     private activatedRoute: ActivatedRoute,
-    private router: Router  
+    private router: Router
   ) { }
  
   ngOnInit(): void {
@@ -72,4 +72,5 @@ projectView : ProjectView = {
   onContributions(){
     this.router.navigate(['contributions/' + this.projectView.id])
   }
+
 }
