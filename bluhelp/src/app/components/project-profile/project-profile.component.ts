@@ -1,4 +1,3 @@
-import { UserService } from './../../services/user.service';
 import { Category } from './../../models/category';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -38,7 +37,6 @@ projectView : ProjectView = {
 
   constructor( 
     private service: ProjectService,
-    private userService: UserService,
     private imageService: ImageService,
     private activatedRoute: ActivatedRoute,
     private router: Router

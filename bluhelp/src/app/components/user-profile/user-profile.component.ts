@@ -51,11 +51,10 @@ export class UserProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUserGet();
-    this.getImage(JSON.parse(this.userService.getUser()).id);
   }
 
   getUserGet(){
-    this.userService.getUserWithProjects(JSON.parse(this.userService.getUser()).id).subscribe(
+    this.userService.getUserWithProjects(this.route.snapshot.params['id']).subscribe(
       (data: UserGet) =>
       {this.userGet = data;
       this.userGet.createdProjects.forEach(project => {
@@ -64,6 +63,7 @@ export class UserProfileComponent implements OnInit {
       this.userGet.contributedProjects.forEach(project => {
         this.getProjectImage(project.id);
       });
+      this.getImage(this.userGet.id);
       console.log(this.userGet)})
   }
 
