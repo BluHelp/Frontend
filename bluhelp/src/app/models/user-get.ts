@@ -9,5 +9,6 @@ export interface UserGet {
     photo: any;
     email: string;
     phone: string;
-    projects: Array<ProjectGet>;
+    createdProjects: Array<ProjectGet>;
+    contributedProjects: Array<ProjectGet>;
 }
