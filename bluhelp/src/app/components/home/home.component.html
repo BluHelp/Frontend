@@ -1,0 +1,26 @@
+<main>
+
+    <h1>Projetos em destaque</h1>
+
+    <section>
+        <div class="cards">
+            <div class="card" (click)="openProject(project.id)" *ngFor="let project of projectget">
+
+                <div class="cards-img">
+                    <img [src]= imageProject alt="" id="project-img">
+                </div>
+            <div>
+                <p class="title">{{project.title}}</p>
+            </div>
+           
+            <div>
+               <img src="../../../assets/inprogress.svg" alt="">
+            </div>
+             
+        
+
+            </div>
+        </div>
+
+    </section>
+</main>

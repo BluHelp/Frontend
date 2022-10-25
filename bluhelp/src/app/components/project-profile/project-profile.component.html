@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="column-1">
+        <div class="row11">
+            <img [src]="imageProject" class="foto-projeto" width="550px" height="220px">
+        </div>
+        <div class="row22">
+            <div class="gap">
+            <div class="icone">
+
+                <img src="../../../assets/objective.svg" alt="">
+                <div class="objective-title">
+                    <h3>Objetivo</h3>
+                </div>
+            </div>
+            <div class="objective-text">
+                <p>
+                    {{ projectView.objective }}
+                </p>
+            </div>
+        </div>
+        <div class="gap">
+            <div class="icone">
+                <img src="../../../assets/pencil.svg" alt="">
+
+                <div class="description-title">
+                    <h3>Descrição</h3>
+                </div>
+            </div>
+       
+        <div class="row33">
+            <p>
+                {{ projectView.description }}
+            </p>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="column-2">
+        <div class="row-1">
+            <h1>{{projectView.title}}</h1>
+            <a>
+                {{projectView.creatorName}}{{projectView.creatorSurname}}
+            </a>
+            <p>Criado em: {{ projectView.date | date: 'dd/MM/yyyy' }}</p>
+            <p>
+                {{projectView.averageReview}}
+            </p>
+        </div>
+
+        <div class="row-2">
+            <div class="icon">
+                <img src="../../../assets/district.svg" alt="">
+                <h3>{{ projectView.district }}</h3>
+            </div>
+            <div class="icon">
+                <img src="../../../assets/category.svg" alt="">
+                <h3>
+                    {{projectView.category.name}}
+                </h3>
+            </div>
+            <div class="icon">
+                <img src="../../../assets/correct-status.svg" alt="">
+                <h3>
+                    {{projectView.progress}}
+                </h3>
+            </div>
+        </div>
+        <div class="row-3">
+            
+            <div (click)="onContributions()" class="contribution-icon">
+                <img src="../../../assets/contribution-button.svg" alt="">
+                <a>Contribuições</a>
+            </div>
+
+            <div class="edit-delete-icon">
+               
+                <div class="delete-icon">
+                    <a (click)="deleteProject()">
+                        <img src="../../../assets/delete.svg " alt=" ">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+<body>
+    <section>
+
+        <form>
+            <div class="titulos">
+                <h1 class="title" [ngStyle]="{'opacity': (currentTab == 0 ? '100%' : '0%')}">Criar Projeto</h1>
+                <h2 class="subtittle" *ngIf="currentTab == 0">Passo 1 - Adicionar Foto</h2>
+                <h2 class="subtittle" *ngIf="currentTab == 1">Passo 2 - Informações do Projeto</h2>
+                <h2 class="subtittle" *ngIf="currentTab == 2">Passo 3 - Descrções e Objetivo do Projeto</h2>
+                <h2 class="subtittle" *ngIf="currentTab == 3">Passo 4 - Endereço do Projeto</h2>
+            </div>
+
+            <div class="steps">
+                <span class="step" [ngStyle]="{'background-color': (currentTab == 0 ? '#002b9a' : '#ffffff')}"></span>
+                <span class="step" [ngStyle]="{'background-color': (currentTab == 1 ? '#002b9a' : '#ffffff')}"></span>
+                <span class="step" [ngStyle]="{'background-color': (currentTab == 2 ? '#002b9a' : '#ffffff')}"></span>
+                <span class="step" [ngStyle]="{'background-color': (currentTab == 3 ? '#002b9a' : '#ffffff')}"></span>
+            </div>
+
+            <div class="tab" *ngIf="currentTab == 0">
+                <label class="label" for="image" id="image">Foto do Projeto</label>
+                <input type="file" value="select" #selectFile (change)="onFileSelected($event)" class="image" id="image"
+                    name="image" />
+            </div>
+
+            <div class="tab" *ngIf="currentTab == 1">
+                <label class="label-text" for="title">Titulo</label>
+                <input class="ttle" type="title" id="title" name="title" [(ngModel)]="project.title" required />
+
+                <select class="category" name="category" id="category" [(ngModel)]="project.category">
+                    <option disabled="disabled" value="Categorias">Categorias</option>
+                    <option value="1" name="category.name">Iluminação</option>
+                    <option value="2" name="category.name">Obra Pública</option>
+                    <option value="3" name="category.name">Pavimentação</option>
+                    <option value="4" name="category.name">Outros</option>
+
+                </select>
+            </div>
+            <div class="tab" *ngIf="currentTab == 2">
+                <label class="label-text">Descrição </label>
+                <textarea name="description" id="description" cols="10" rows="30"
+                    [(ngModel)]="project.description"></textarea>
+
+                <label class="label-text">Objetivo </label>
+                <input type="text" id="password" name="objective" [(ngModel)]="project.objective" required>
+            </div>
+
+            <div class="tab" *ngIf="currentTab == 3">
+                <div class="forms">
+                    <div>
+                        <label class="label-text">CEP</label>
+                        <input class="info" type="text" required id="cep" name="cep" [(ngModel)]="project.cep" />
+                    </div>
+                    <div>
+                        <label class="label-text">Bairro</label>
+                        <input class="info" type="text" name="district" [(ngModel)]="project.district" />
+                    </div>
+                </div>
+                <div class="forms">
+                    <div>
+                        <label class="label-text">Logradouro</label>
+                        <input class="info" type="text" required id="place" name="place" [(ngModel)]="project.street" />
+                    </div>
+                    <div>
+                        <label class="label-text">Tipo via</label>
+                        <input class="info" type="text" name="type" />
+                    </div>
+                </div>
+                <div class="forms">
+                    <div>
+                        <label class="label-text">Número</label>
+                        <input class="info" type="text" required id="district" name="district"
+                            [(ngModel)]="project.number" />
+                    </div>
+                    <div>
+                        <label class="label-text">Complemento</label>
+                        <input class="info" type="text" name="reference" [(ngModel)]="project.reference" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="button-class" (click)="alterStep(-1)" *ngIf="currentTab != 0 && currentTab <=3 ">&lt;
+                    Voltar</button>
+                <button class="button-class" (click)="alterStep(1)" *ngIf="currentTab != 3">Avançar &gt;</button>
+                <button class="button-class" (click)="doRegister()" *ngIf="currentTab == 3"
+                    [routerLink]="['project-profile/']">Criar Projeto</button>
+            </div>
+        </form>
+    </section>
+</body>

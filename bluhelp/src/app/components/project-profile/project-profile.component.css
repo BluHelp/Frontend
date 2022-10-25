@@ -1,0 +1,162 @@
+h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.row-1 a {
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    grid-template-areas: "row11 row-1" "row22 row-2" "row33 row-3";
+    grid-gap: 120px;
+}
+
+.column-1 {
+    width: 550px;
+    margin-top: 20px;
+}
+
+.objective-title {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.objective-icon {
+    float: left;
+    vertical-align: top;
+}
+
+p {
+    text-align: justify;
+    clear: both;
+}
+
+.description-title {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.description-icon {
+    float: left;
+    vertical-align: top;
+}
+
+.contribution-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 68%;
+    gap: 2%;
+    border: 2px solid #002b9a;
+    border-radius: 7px;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.contribution-icon img{
+    margin-right: 5px;
+}
+
+.column-2 {
+    width: 130%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.row-1 {
+    grid-area: "row-1";
+    height: 220px;
+}
+
+.row-2 {
+    grid-area: "row-2";
+}
+
+.row-3 {
+    grid-area: "row-3";
+    margin-top: 5%;
+    display: flex;
+}
+
+.row-1 p {
+    margin-top: 30px;
+}
+
+.row11 {
+    grid-area: "row11";
+}
+
+.row22 {
+    grid-area: "row22";
+}
+
+.row33 {
+    grid-area: "row33";
+}
+
+.foto-projeto {
+    border: transparent solid 0px;
+    border-radius: 7px;
+}
+
+.edit-delete-icon {
+    margin-top: 20px;
+}
+
+.edit-icon {
+    display: inline-block;
+    border: #002b9a 2px solid;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 60px;
+}
+.icone{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    width: 100%;
+    height: 60px;
+}
+.gap{
+    margin-bottom: 15px;
+}
+
+.delete-icon {
+    border: #002b9a 2px solid;
+    border-radius: 50%;
+    padding: 5px 7px;
+}
+
+.edit-icon:hover {
+    opacity: 0.6;
+}
+
+.delete-icon:hover {
+    opacity: 0.6;
+}

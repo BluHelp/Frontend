@@ -1,0 +1,120 @@
+.modal {
+    width: 45%;
+    height: 70%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    animation: animate;
+    animation-duration: 800ms;
+    border-radius: 3%;
+    background-color: silver;
+}
+
+.conteudoModal {
+    align-items: center;
+}
+
+.btn {
+    padding: 1px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 8.0;
+    color: black;
+}
+
+.fechar {
+    position: absolute;
+    top: -1%;
+    left: 0%;
+    transform: translate(-50%, -50%, );
+    width: 25px;
+    height: 25px;
+    float: left;
+    cursor: pointer;
+    animation: animate;
+    animation-duration: 800ms;
+    padding: 20px;
+}
+
+.titulo {
+    margin-top: 80px;
+    margin-left: 250px;
+}
+
+.btn1 {
+    font-size: large;
+    justify-content: center;
+    color: white;
+    background: #002B9A;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 250px;
+    height: 40px;
+    margin-top: 100px;
+    margin-left: 205px;
+}
+
+.btn1:hover {
+    opacity: 0.6;
+}
+
+.btn2 {
+    font-size: large;
+    justify-content: center;
+    color: white;
+    background: #002B9A;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 250px;
+    height: 40px;
+    margin-top: 70px;
+    margin-left: 205px;
+}
+
+.btn2:hover {
+    opacity: 0.6;
+}
+
+.btn3 {
+    font-size: large;
+    justify-content: center;
+    color: white;
+    background: #002B9A;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 250px;
+    height: 40px;
+    margin-top: 70px;
+    margin-left: 205px;
+}
+
+.btn3:hover {
+    opacity: 0.6;
+}
+
+.btn4 {
+    font-size: large;
+    justify-content: center;
+    color: white;
+    background: #002B9A;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 250px;
+    height: 40px;
+    margin-top: 70px;
+    margin-left: 205px;
+}
+
+.btn4:hover {
+    opacity: 0.6;
+}

@@ -1,0 +1,27 @@
+<main>
+  <section>
+    <h1>Contribuições</h1>
+
+    <div class="contribuicoes">
+
+      <div *ngFor="let contribution of contributionGet">
+        <span class="row">
+        <a>{{ contribution.user.name }}</a>
+       
+        <p class="row-1">{{contribution.date | date: 'dd/MM/yyyy'}} </p>
+        </span>
+        <p class="row-2">{{ contribution.content }}</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="text-area">
+        <input type="text" placeholder="Contribuir" [(ngModel)]="contribution.content" />
+
+        <button type="button" (click)="doRegister()">
+          <img src="../../../assets/contribution-arrow.svg" alt="BluHelp" />
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
