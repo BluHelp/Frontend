@@ -4,7 +4,6 @@ export interface Project {
     objective: string;
     description: string;
     category: number;
-    photo: string;
     street: string;
     number: number;
     district: string;

@@ -18,71 +18,74 @@
             </div>
 
             <div class="tab" *ngIf="currentTab == 0">
-
                 <label class="label" for="image" id="image">Foto do Projeto</label>
-                <input type="file" value="select" class="image" id="image" name="image" />
+                <input type="file" value="select" #selectFile (change)="onFileSelected($event)" class="image" id="image"
+                    name="image" />
             </div>
 
             <div class="tab" *ngIf="currentTab == 1">
                 <label class="label-text" for="title">Titulo</label>
-                <input class="ttle" type="title" id="title" name="title" [(ngModel)]="project.title"  required/>
+                <input class="ttle" type="title" id="title" name="title" [(ngModel)]="project.title" required />
 
                 <select class="category" name="category" id="category" [(ngModel)]="project.category">
-                <option disabled="disabled" value="Categorias">Categorias</option>
-                <option value="1" name="category.name">Categoria 1</option>
-                <option value="2" name="category.name">Categoria 2</option>
-                <option value="3" name="category.name">Categoria 3</option>
-                <option value="4" name="category.name">Categoria 4</option>
+                    <option disabled="disabled" value="Categorias">Categorias</option>
+                    <option value="1" name="category.name">Iluminação</option>
+                    <option value="2" name="category.name">Obra Pública</option>
+                    <option value="3" name="category.name">Pavimentação</option>
+                    <option value="4" name="category.name">Outros</option>
 
-            </select>
+                </select>
             </div>
             <div class="tab" *ngIf="currentTab == 2">
                 <label class="label-text">Descrição </label>
-                <textarea name="description" id="description" cols="10" rows="30" [(ngModel)]="project.description" ></textarea>
+                <textarea name="description" id="description" cols="10" rows="30"
+                    [(ngModel)]="project.description"></textarea>
 
                 <label class="label-text">Objetivo </label>
-                <input type="text" id="password" name="objective" [(ngModel)]="project.objective" required >
+                <input type="text" id="password" name="objective" [(ngModel)]="project.objective" required>
             </div>
 
             <div class="tab" *ngIf="currentTab == 3">
-            <div class="forms">
-                <div>
-                    <label class="label-text">CEP</label>
-                    <input class="info" type="text" required id="cep" name="cep" [(ngModel)]="project.cep"/> 
-                </div>
-                <div>
-                    <label class="label-text">Bairro</label>
-                    <input class="info" type="text" name="district" [(ngModel)]="project.district" />
-                </div>
+                <div class="forms">
+                    <div>
+                        <label class="label-text">CEP</label>
+                        <input class="info" type="text" required id="cep" name="cep" [(ngModel)]="project.cep" />
+                    </div>
+                    <div>
+                        <label class="label-text">Bairro</label>
+                        <input class="info" type="text" name="district" [(ngModel)]="project.district" />
+                    </div>
                 </div>
                 <div class="forms">
                     <div>
                         <label class="label-text">Logradouro</label>
-                        <input class="info" type="text" required id="place" name="place"[(ngModel)]="project.street" /> 
+                        <input class="info" type="text" required id="place" name="place" [(ngModel)]="project.street" />
                     </div>
                     <div>
                         <label class="label-text">Tipo via</label>
-                        <input class="info" type="text" name="type"  />
+                        <input class="info" type="text" name="type" />
                     </div>
-                    </div>
-                    <div class="forms">
+                </div>
+                <div class="forms">
                     <div>
                         <label class="label-text">Número</label>
-                        <input class="info" type="text" required id="district" name="district" [(ngModel)]="project.number"/> 
+                        <input class="info" type="text" required id="district" name="district"
+                            [(ngModel)]="project.number" />
                     </div>
                     <div>
                         <label class="label-text">Complemento</label>
-                        <input class="info" type="text" name="reference" [(ngModel)]="project.reference"/>
-                    </div>
+                        <input class="info" type="text" name="reference" [(ngModel)]="project.reference" />
                     </div>
                 </div>
+            </div>
 
             <div class="buttons">
-                <button class="button-class" (click)="alterStep(-1)" *ngIf="currentTab != 0 && currentTab <=3 ">&lt; Voltar</button>
-                <button class="button-class" (click)="alterStep(1)" *ngIf="currentTab != 3" >Avançar &gt;</button>
-                <button class="button-class" (click)="doRegister()" *ngIf="currentTab == 3" [routerLink]="['project-profile/']">Criar Projeto</button>
+                <button class="button-class" (click)="alterStep(-1)" *ngIf="currentTab != 0 && currentTab <=3 ">&lt;
+                    Voltar</button>
+                <button class="button-class" (click)="alterStep(1)" *ngIf="currentTab != 3">Avançar &gt;</button>
+                <button class="button-class" (click)="doRegister()" *ngIf="currentTab == 3"
+                    [routerLink]="['project-profile/']">Criar Projeto</button>
             </div>
         </form>
     </section>
 </body>
-
